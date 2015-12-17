@@ -1,4 +1,4 @@
-package lesson3.model1;
+package lesson3.flowerShop;
 
 public class Chamomile {
 }
