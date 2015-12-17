@@ -1,4 +1,4 @@
 package lesson3.flowerShop;
 
-public class Aster {
+public class Aster extends Flower {
 }
