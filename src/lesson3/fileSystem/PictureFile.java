@@ -1,4 +1,4 @@
 package lesson3.fileSystem;
 
-public class PictureFile {
+public class PictureFile extends File {
 }

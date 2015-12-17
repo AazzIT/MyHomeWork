@@ -1,4 +1,4 @@
 package lesson3.fileSystem;
 
-public class AudioFile {
+public class AudioFile extends File {
 }
