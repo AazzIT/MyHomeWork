@@ -3,33 +3,34 @@ package lesson3.fileSystem;
 public abstract class File {
     private String name;
     private String typeOfFile;
-    private String parentFolder;
+    private Folder parentFolder;
+
 
     protected File() {
-        name = "Root";
-        typeOfFile = "Folder";
-        parentFolder = "Root";
     }
 
 
-    public void getTypeOfFile() {
-        System.out.println(typeOfFile);
+    public String getTypeOfFile() {
+        //System.out.println(typeOfFile);
+        return typeOfFile;
     }
 
     public void setTypeOfFile(String type) {
         this.typeOfFile = type;
     }
 
-    public void getParentFolder() {
-        System.out.println(parentFolder);
+    public String getParentFolder() {
+        //System.out.println(parentFolder.getName());
+        return parentFolder.getName();
     }
 
-    public void setParentFolder(String parentFolderName) {
+    public void setParentFolder(Folder parentFolderName) {
         this.parentFolder = parentFolderName;
     }
 
-    public void getName() {
-        System.out.println(name);
+    public String getName() {
+        //System.out.println(name);
+        return name;
     }
 
     public void setName(String name) {
