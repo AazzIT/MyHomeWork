@@ -1,4 +1,6 @@
 package lesson3.fileSystem;
+//Делаем пробел между строкой package и объявлением класса (либо импортов)
+
 //Abstract SuperClass File
 public abstract class File {
     private String name;
