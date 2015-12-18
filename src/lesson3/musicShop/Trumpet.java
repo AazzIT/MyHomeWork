@@ -1,4 +1,4 @@
 package lesson3.musicShop;
 
-public class Trumpet {
+public class Trumpet extends MusicalInstrument {
 }

@@ -1,4 +1,4 @@
 package lesson3.musicShop;
 
-public class Piano {
+public class Piano extends MusicalInstrument {
 }
