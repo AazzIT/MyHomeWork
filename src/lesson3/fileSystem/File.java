@@ -21,7 +21,7 @@ public abstract class File {
 
     public String getParentFolder() {
         //
-        if (this.name.equals("Root")){
+        if (this.name == "Root"){
             return "I am root Folder ";
         }else{
             return parentFolder.getName();
