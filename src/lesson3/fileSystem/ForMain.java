@@ -6,7 +6,7 @@ public class ForMain {
         Folder rootFolder = new Folder();
         rootFolder.printInfo();
         //Create Other Folder in Root
-        Folder AudioFolder = new Folder("AudioFolder", rootFolder);
+        Folder AudioFolder = new Folder("AudioFolder", rootFolder);//наименование переменных с маленькой буквы
         AudioFolder.printInfo();
         //Create Audio File in AudioFolder
         AudioFile Rock = new AudioFile("Rock.mp3", AudioFolder);
