@@ -21,7 +21,7 @@ public abstract class File {
 
     public String getParentFolder() {
         //
-        if (this.name == "Root"){
+        if (this.getName() == "Root"){
             return "I am root Folder ";
         }else{
             return parentFolder.getName();
@@ -39,5 +39,12 @@ public abstract class File {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    protected void printInfo(){
+        System.out.println("My Name is " + this.getName());
+        System.out.println("My Folder -  " + this.getParentFolder());
+        System.out.println(this.getTypeOfFile());
+        System.out.println();
     }
 }
