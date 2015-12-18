@@ -5,13 +5,10 @@ public abstract class File {
     private String typeOfFile;
     private Folder parentFolder;
 
-
     protected File() {
     }
 
-
     public String getTypeOfFile() {
-        //
         return typeOfFile;
     }
 
@@ -20,7 +17,6 @@ public abstract class File {
     }
 
     public String getParentFolder() {
-        //
         if (this.getName() == "Root"){
             return "I am root Folder ";
         }else{
@@ -33,7 +29,6 @@ public abstract class File {
     }
 
     public String getName() {
-        //
         return name;
     }
 

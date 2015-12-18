@@ -21,6 +21,10 @@ public class ForMain {
         //Create Audio File in Root Folder
         AudioFile file2 = new AudioFile("Blues.mp3", rootFolder);
         file2.printInfo();
+
+        //Create Text File in AudioFolder
+        TextFile file4 = new TextFile("TextOfSong.gif", folder1);
+        file4.printInfo();
     }
 
 
