@@ -6,19 +6,19 @@ public class ForMain {
         Folder rootFolder = new Folder();
         rootFolder.printInfo();
         //Create Other Folder in Root
-        Folder AudioFolder = new Folder("AudioFolder", rootFolder);//наименование переменных с маленькой буквы
-        AudioFolder.printInfo();
+        Folder audioFolder = new Folder("AudioFolder", rootFolder);
+        audioFolder.printInfo();
         //Create Audio File in AudioFolder
-        AudioFile Rock = new AudioFile("Rock.mp3", AudioFolder);
-        Rock.printInfo();
+        AudioFile rock = new AudioFile("Rock.mp3", audioFolder);
+        rock.printInfo();
         //Create Picture File in AudioFolder
-        PictureFile LogoCD = new PictureFile("LogoCD.gif", AudioFolder);
-        LogoCD.printInfo();
+        PictureFile logoCD = new PictureFile("LogoCD.gif", audioFolder);
+        logoCD.printInfo();
         //Create Audio File in Root Folder
-        AudioFile Blues = new AudioFile("Blues.mp3", rootFolder);
-        Blues.printInfo();
+        AudioFile blues = new AudioFile("Blues.mp3", rootFolder);
+        blues.printInfo();
         //Create Text File in AudioFolder
-        TextFile TextOfSong = new TextFile("TextOfSong.gif", AudioFolder);
-        TextOfSong.printInfo();
+        TextFile textOfSong = new TextFile("TextOfSong.gif", audioFolder);
+        textOfSong.printInfo();
     }
 }
