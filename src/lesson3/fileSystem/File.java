@@ -36,6 +36,7 @@ public abstract class File {
         this.name = name;
     }
 
+    // View Information about our File(or Folder))
     protected void printInfo(){
         System.out.println("My Name is " + this.getName());
         System.out.println("My Folder -  " + this.getParentFolder());
