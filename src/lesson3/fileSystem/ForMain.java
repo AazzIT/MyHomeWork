@@ -7,24 +7,24 @@ public class ForMain {
         rootFolder.printInfo();
 
         //Create Other Folder in Root
-        Folder folder1 = new Folder("AudioFolder", rootFolder); // избегаем наименований с цифрами, лучше характеризовать словами
-        folder1.printInfo(); //напр., просто folder, audioFolder, audioFile и т.д.
+        Folder AudioFolder = new Folder("AudioFolder", rootFolder); // избегаем наименований с цифрами, лучше характеризовать словами
+        AudioFolder.printInfo(); //напр., просто folder, audioFolder, audioFile и т.д.
 
         //Create Audio File in AudioFolder
-        AudioFile file1 = new AudioFile("Rock.mp3", folder1);
-        file1.printInfo();
+        AudioFile Rock = new AudioFile("Rock.mp3", AudioFolder);
+        Rock.printInfo();
 
         //Create Picture File in AudioFolder
-        PictureFile file3 = new PictureFile("LogoCD.gif", folder1);
-        file3.printInfo();
+        PictureFile LogoCD = new PictureFile("LogoCD.gif", AudioFolder);
+        LogoCD.printInfo();
 
         //Create Audio File in Root Folder
-        AudioFile file2 = new AudioFile("Blues.mp3", rootFolder);
-        file2.printInfo();
+        AudioFile Blues = new AudioFile("Blues.mp3", rootFolder);
+        Blues.printInfo();
 
         //Create Text File in AudioFolder
-        TextFile file4 = new TextFile("TextOfSong.gif", folder1);
-        file4.printInfo();
+        TextFile TextOfSong = new TextFile("TextOfSong.gif", AudioFolder);
+        TextOfSong.printInfo();
     }
 
 
