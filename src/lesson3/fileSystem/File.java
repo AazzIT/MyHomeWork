@@ -11,7 +11,7 @@ public abstract class File {
 
 
     public String getTypeOfFile() {
-        //System.out.println(typeOfFile);
+        //
         return typeOfFile;
     }
 
@@ -20,8 +20,13 @@ public abstract class File {
     }
 
     public String getParentFolder() {
-        //System.out.println(parentFolder.getName());
-        return parentFolder.getName();
+        //
+        if (this.name.equals("Root")){
+            return "I am root Folder ";
+        }else{
+            return parentFolder.getName();
+        }
+
     }
 
     public void setParentFolder(Folder parentFolderName) {
@@ -29,7 +34,7 @@ public abstract class File {
     }
 
     public String getName() {
-        //System.out.println(name);
+        //
         return name;
     }
 

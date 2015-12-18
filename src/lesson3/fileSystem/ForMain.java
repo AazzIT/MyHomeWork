@@ -4,6 +4,7 @@ public class ForMain {
     public static void main(String[] args) {
         Folder rootFolder = new Folder();
         System.out.println("My Name is " + rootFolder.getName());
+        System.out.println("My Folder -  " + rootFolder.getParentFolder());
         System.out.println(rootFolder.getTypeOfFile());
         System.out.println();
 
