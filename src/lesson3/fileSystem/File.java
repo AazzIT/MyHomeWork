@@ -28,8 +28,8 @@ public abstract class File {
         this.parentFolder = parentFolderName;
     }
 
-    public String getName() {
-        return name;
+    public void getName() {
+        System.out.println(name);
     }
 
     public void setName(String name) {
