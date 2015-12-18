@@ -5,28 +5,20 @@ public class ForMain {
         //Create Root Folder
         Folder rootFolder = new Folder();
         rootFolder.printInfo();
-
         //Create Other Folder in Root
-        Folder AudioFolder = new Folder("AudioFolder", rootFolder); // избегаем наименований с цифрами, лучше характеризовать словами
-        AudioFolder.printInfo(); //напр., просто folder, audioFolder, audioFile и т.д.
-
+        Folder AudioFolder = new Folder("AudioFolder", rootFolder);
+        AudioFolder.printInfo();
         //Create Audio File in AudioFolder
         AudioFile Rock = new AudioFile("Rock.mp3", AudioFolder);
         Rock.printInfo();
-
         //Create Picture File in AudioFolder
         PictureFile LogoCD = new PictureFile("LogoCD.gif", AudioFolder);
         LogoCD.printInfo();
-
         //Create Audio File in Root Folder
         AudioFile Blues = new AudioFile("Blues.mp3", rootFolder);
         Blues.printInfo();
-
         //Create Text File in AudioFolder
         TextFile TextOfSong = new TextFile("TextOfSong.gif", AudioFolder);
         TextOfSong.printInfo();
     }
-
-
-
 }
