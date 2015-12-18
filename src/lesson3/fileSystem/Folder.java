@@ -6,7 +6,7 @@ public class Folder extends File {
     //Without parameters
     public Folder() {
         super.setName("Root");
-        super.setTypeOfFile("I am Folder");
+        super.setTypeOfFile("I am Folder"); // Лучше писать не целый текст, а просто задать тип - folder
 
     }
     //With parameters

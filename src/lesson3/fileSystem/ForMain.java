@@ -7,8 +7,8 @@ public class ForMain {
         rootFolder.printInfo();
 
         //Create Other Folder in Root
-        Folder folder1 = new Folder("AudioFolder", rootFolder);
-        folder1.printInfo();
+        Folder folder1 = new Folder("AudioFolder", rootFolder); // избегаем наименований с цифрами, лучше характеризовать словами
+        folder1.printInfo(); //напр., просто folder, audioFolder, audioFile и т.д.
 
         //Create Audio File in AudioFolder
         AudioFile file1 = new AudioFile("Rock.mp3", folder1);
