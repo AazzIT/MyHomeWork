@@ -26,7 +26,6 @@ public abstract class File {
         }else{
             return parentFolder.getName();
         }
-
     }
 
     public void setParentFolder(Folder parentFolderName) {
