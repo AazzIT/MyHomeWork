@@ -1,5 +1,5 @@
 package lesson3.fileSystem;
-
+//Abstract SuperClass File
 public abstract class File {
     private String name;
     private String typeOfFile;
