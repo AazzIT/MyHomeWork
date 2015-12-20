@@ -6,9 +6,12 @@ public class ForMain {
         Piano piano = new Piano();
         Trumpet trumpet = new Trumpet();
         MusicShop musicShop = new MusicShop();
-        musicShop.addInstrument(guitar);
-        musicShop.addInstrument(piano);
-        musicShop.addInstrument(trumpet);
         musicShop.info();
+        guitar.inShop(musicShop);
+        guitar.info();
+        piano.inShop(musicShop);
+        piano.info();
+        trumpet.inShop(musicShop);
+        trumpet.info();
     }
 }
