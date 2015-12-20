@@ -7,6 +7,7 @@ public class Folder extends File {
         super.setName("Root");
         super.setType("Folder");
     }
+
     //With parameters
     public Folder(String name, Folder parentFolder) {
         super.setName(name);
