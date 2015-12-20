@@ -5,13 +5,10 @@ public class ForMain {
         Guitar guitar = new Guitar();
         Piano piano = new Piano();
         Trumpet trumpet = new Trumpet();
-        MusicShop musicShop = new MusicShop();
+        MusicShop musicShop = new MusicShop(guitar);
+        musicShop.addInstrument(piano);
+        musicShop.addInstrument(trumpet);
         musicShop.info();
-        guitar.inShop(musicShop); // магазин должен добавлять себе инструменты.
-        guitar.info();
-        piano.inShop(musicShop);
-        piano.info();
-        trumpet.inShop(musicShop);
-        trumpet.info();
+
     }
 }

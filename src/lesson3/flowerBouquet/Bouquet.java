@@ -21,7 +21,6 @@ public class Bouquet {
         System.out.println(name + " contain from: ");
         for(int i = 0; i <= count  - 1; i++) {
             flowers[i].info();
-            //System.out.println(" " + flowers[i].name + " color: " + flowers[i].color);
         }
         System.out.println("\r\n");
     }
