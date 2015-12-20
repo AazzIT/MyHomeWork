@@ -5,13 +5,4 @@ public class Aster extends Flower {
         super.name = "Aster";
         super.color = color;
     }
-
-    public void addBouquet(Bouquet bouquet){//а нужно ли, чтобы цветок знал, в какой букет его засунут?
-        super.bouquet = bouquet;
-        bouquet.addFlower("Aster");
-    }
-
-    public void info() {
-        System.out.println("Flower: " + name+ " color:" + color);
-    }
 }

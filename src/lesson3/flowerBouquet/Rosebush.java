@@ -2,15 +2,14 @@ package lesson3.flowerBouquet;
 
 public class Rosebush {
     public Rose[] rose;
-    int count;
+    private int count;
 
     public Rosebush() {
        rose = new Rose[10];
-       count = 0; //можно не инициировать нулем, поле класса по умолчанию будет ноль.
     }
 
-    public void addRose(Rose rose) {
-        this.rose[count+1] = rose;
+    public void include(Rose rose) {
+        this.rose[count + 1] = rose;
         count++;
     }
 

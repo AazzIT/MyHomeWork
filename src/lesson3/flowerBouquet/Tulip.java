@@ -5,13 +5,4 @@ public class Tulip extends Flower {
         super.name = "Tulip";
         super.color = color;
     }
-
-    public void addBouquet(Bouquet bouquet){
-        super.bouquet = bouquet;
-        bouquet.addFlower("Tulip");
-    }
-
-    public void info() {
-        System.out.println("Flower " + name+ " color:" + color);
-    }
 }

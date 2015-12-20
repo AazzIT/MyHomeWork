@@ -7,12 +7,7 @@ public class Rose extends Flower {
         super.color = color;
         this.spike = spike;
     }
-
-    public void addBouquet(Bouquet bouquet){
-        super.bouquet = bouquet;
-        bouquet.addFlower("Rose");
-    }
-
+    @Override
     public void info() { // если метод не используется - это мертвый код. Или используй, или удали.
         System.out.println("Flower " + name+ " color:" + color + " " + spike);
     }

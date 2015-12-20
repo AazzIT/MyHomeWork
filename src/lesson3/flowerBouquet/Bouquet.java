@@ -2,19 +2,27 @@ package lesson3.flowerBouquet;
 
 public class Bouquet {
     public String name;
-    public String flowers; // было бы логичней цветы собирать в массив Flower[]
+    public Flower[] flowers;
+    private int count;
 
-    public Bouquet(String name) {
+    public Bouquet(String name, Flower flower) {
         this.name = name;
-        flowers = "";//по умолчанию стринговое поле класса инициализируется как null
+        this.flowers = new Flower[10];
+        this.flowers[0] = flower;
+        count = 1;
     }
 
-    public void addFlower(String flower) {
-        flowers = this.flowers + "\r\n " + flower;
+    public void addFlower(Flower flower) {
+        this.flowers[count] = flower;
+        count++;
     }
 
     public void info() {
-        System.out.println(name);
-        System.out.println("Contains from: " + flowers);
+        System.out.println(name + " contain from: ");
+        for(int i = 0; i <= count  - 1; i++) {
+            flowers[i].info();
+            //System.out.println(" " + flowers[i].name + " color: " + flowers[i].color);
+        }
+        System.out.println("\r\n");
     }
 }
