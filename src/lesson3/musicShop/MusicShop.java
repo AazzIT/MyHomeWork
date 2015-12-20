@@ -1,29 +1,31 @@
 package lesson3.musicShop;
 
-import lesson3.flowerBouquet.Flower;
-
 public class MusicShop {
     public String name;
-    public MusicalInstrument[] musicalInstrument;
+    private MusicalInstrument[] musicInstrument;
     private int count;
 
-    public MusicShop(MusicalInstrument musicalInstrument) {
-        name = "Symphony";
-        this.musicalInstrument = new MusicalInstrument[10];
-        this.musicalInstrument[0] = musicalInstrument;
-        count = 1;
+    public MusicShop(String name) {
+        this.name = name;
+        this.musicInstrument = new MusicalInstrument[10];
+        count = 0;
+
     }
 
-    public void addInstrument(MusicalInstrument musicalInstrument) {
-        this.musicalInstrument[count] = musicalInstrument;
-        count++;
+    public void addInstrument(MusicalInstrument musicInstrument) {
+        this.musicInstrument[count] = musicInstrument;
+        this.count++;
     }
 
     public void info() {
-        System.out.println("MusicShop \"" + name + "\" cells: ");
-        for(int i = 0; i <= count  - 1; i++) {
-            musicalInstrument[i].info();
+        System.out.println("MusicShop \"" + name + "\" sells: ");
+        if (count > 0) {
+            for(int i = 0; i <= count + 1; i++) {
+                System.out.println(musicInstrument[i].name);
+            }
+            System.out.println("\r\n");
+        } else {
+            System.out.println(name + "shop is empty");
         }
-        System.out.println("\r\n");
     }
 }
