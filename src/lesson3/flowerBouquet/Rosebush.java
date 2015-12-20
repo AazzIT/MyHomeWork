@@ -6,7 +6,7 @@ public class Rosebush {
 
     public Rosebush() {
        rose = new Rose[10];
-       count = 0;
+       count = 0; //можно не инициировать нулем, поле класса по умолчанию будет ноль.
     }
 
     public void addRose(Rose rose) {

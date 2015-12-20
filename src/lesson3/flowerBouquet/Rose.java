@@ -13,7 +13,7 @@ public class Rose extends Flower {
         bouquet.addFlower("Rose");
     }
 
-    public void info() {
+    public void info() { // если метод не используется - это мертвый код. Или используй, или удали.
         System.out.println("Flower " + name+ " color:" + color + " " + spike);
     }
 }

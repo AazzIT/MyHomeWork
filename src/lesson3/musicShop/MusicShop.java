@@ -1,6 +1,6 @@
 package lesson3.musicShop;
 
-public class MusicShop {
+public class MusicShop { // а где инструменты?
     public String name;
 
     public MusicShop() {

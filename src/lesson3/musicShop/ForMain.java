@@ -7,7 +7,7 @@ public class ForMain {
         Trumpet trumpet = new Trumpet();
         MusicShop musicShop = new MusicShop();
         musicShop.info();
-        guitar.inShop(musicShop);
+        guitar.inShop(musicShop); // магазин должен добавлять себе инструменты.
         guitar.info();
         piano.inShop(musicShop);
         piano.info();
