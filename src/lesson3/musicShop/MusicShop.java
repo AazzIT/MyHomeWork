@@ -2,7 +2,7 @@ package lesson3.musicShop;
 
 public class MusicShop {
     public String name;
-    private MusicalInstrument[] musicalInstruments; //наименование массива как правило во множественном числе instruments
+    private MusicalInstrument[] musicalInstruments;
     private int count;
 
     public MusicShop(String name) {
