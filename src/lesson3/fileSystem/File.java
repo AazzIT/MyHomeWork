@@ -3,7 +3,7 @@ package lesson3.fileSystem;
 public abstract class File {
     private String name;
     private String type;
-    private Folder parentFolder;
+    private File parentFolder;
 
     protected File() {
     }
@@ -24,7 +24,7 @@ public abstract class File {
         }
     }
 
-    public void setParentFolder(Folder parentFolder) {
+    public void setParentFolder(File parentFolder) {
         this.parentFolder = parentFolder;
     }
 
