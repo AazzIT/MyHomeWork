@@ -8,7 +8,7 @@ public class Tulip extends Flower {
 
     public void addBouquet(Bouquet bouquet){
         super.bouquet = bouquet;
-        bouquet.addFlower("bouquet");
+        bouquet.addFlower("Tulip");
     }
 
     public void info() {
