@@ -6,5 +6,4 @@ public abstract class Flower {
     public String color;
 
     public abstract void addBouquet(Bouquet bouquet);
-    public abstract void info();
 }
