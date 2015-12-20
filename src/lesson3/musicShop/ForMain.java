@@ -9,6 +9,6 @@ public class ForMain {
         musicShop.addToShowcase(guitar);
         musicShop.addToShowcase(piano);
         musicShop.addToShowcase(trumpet);
-        musicShop.info();
+        musicShop.getInfo();
     }
 }

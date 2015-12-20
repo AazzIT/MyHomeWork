@@ -16,7 +16,7 @@ public class ForMain {
         bouquet.addFlower(chamomile);
         bouquet.addFlower(tulip);
         //Print info about Bouquet
-        bouquet.info();
+        bouquet.getInfo();
         //Add rose to Rosebush
         Rosebush rosebush = new Rosebush();
         rosebush.include(roseOne);

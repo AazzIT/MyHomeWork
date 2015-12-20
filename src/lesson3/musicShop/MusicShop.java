@@ -2,24 +2,24 @@ package lesson3.musicShop;
 
 public class MusicShop {
     public String name;
-    private MusicalInstrument[] musicInstrument; //наименование массива как правило во множественном числе instruments
+    private MusicalInstrument[] musicalInstruments; //наименование массива как правило во множественном числе instruments
     private int count;
 
     public MusicShop(String name) {
         this.name = name;
-        this.musicInstrument = new MusicalInstrument[10];
+        this.musicalInstruments = new MusicalInstrument[10];
     }
 
     public void addToShowcase(MusicalInstrument musicInstrument) {
-        this.musicInstrument[count] = musicInstrument;
+        this.musicalInstruments[count] = musicInstrument;
         count++;
     }
 
-    public void info() {
+    public void getInfo() {
         System.out.println("MusicShop \"" + name + "\" sells: ");
         if (count > 0) {
             for(int i = 0; i < count; i++) {
-                musicInstrument[i].info();
+                musicalInstruments[i].info();
             }
             System.out.println("\r\n");
         } else {
