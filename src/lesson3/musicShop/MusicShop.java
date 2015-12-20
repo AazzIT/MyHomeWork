@@ -8,11 +8,9 @@ public class MusicShop {
     public MusicShop(String name) {
         this.name = name;
         this.musicInstrument = new MusicalInstrument[10];
-        count = 0;
-
     }
 
-    public void addInstrument(MusicalInstrument musicInstrument) {
+    public void addToShowcase(MusicalInstrument musicInstrument) {
         this.musicInstrument[count] = musicInstrument;
         this.count++;
     }
@@ -20,8 +18,8 @@ public class MusicShop {
     public void info() {
         System.out.println("MusicShop \"" + name + "\" sells: ");
         if (count > 0) {
-            for(int i = 0; i <= count + 1; i++) {
-                System.out.println(musicInstrument[i].name);
+            for(int i = 0; i < count; i++) {
+                musicInstrument[i].info();
             }
             System.out.println("\r\n");
         } else {
