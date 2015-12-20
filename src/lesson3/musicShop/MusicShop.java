@@ -12,7 +12,7 @@ public class MusicShop {
 
     public void addToShowcase(MusicalInstrument musicInstrument) {
         this.musicInstrument[count] = musicInstrument;
-        this.count++;
+        count++;
     }
 
     public void info() {

@@ -9,16 +9,16 @@ public class ForMain {
         Folder audioFolder = new Folder("AudioFolder", rootFolder);
         audioFolder.printInfo();
         //Create Audio File in AudioFolder
-        AudioFile rock = new AudioFile("Rock.mp3", audioFolder);
+        File rock = new AudioFile("Rock.mp3", audioFolder);
         rock.printInfo();
         //Create Picture File in AudioFolder
-        PictureFile logoCD = new PictureFile("LogoCD.gif", audioFolder);
+        File logoCD = new PictureFile("LogoCD.gif", audioFolder);
         logoCD.printInfo();
         //Create Audio File in Root Folder
-        AudioFile blues = new AudioFile("Blues.mp3", rootFolder);
+        File blues = new AudioFile("Blues.mp3", rootFolder);
         blues.printInfo();
         //Create Text File in AudioFolder
-        TextFile textOfSong = new TextFile("TextOfSong.gif", audioFolder);
+        File textOfSong = new TextFile("TextOfSong.gif", audioFolder);
         textOfSong.printInfo();
     }
 }
