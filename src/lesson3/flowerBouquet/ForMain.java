@@ -16,12 +16,14 @@ public class ForMain {
         aster.addBouquet(bouquet);
         tulip.addBouquet(bouquet);
         chamomile.addBouquet(bouquet);
+        //Print info about Bouquet
         bouquet.info();
         //Add rose to Rosebush
         Rosebush rosebush = new Rosebush();
         rosebush.addRose(roseOne);
         rosebush.addRose(roseTwo);
         rosebush.addRose(roseThree);
+        //Print info about Rosebush
         rosebush.info();
     }
 }
