@@ -3,7 +3,7 @@ package lesson3.fileSystem;
 public class ForMain {
     public static void main(String[] args) {
         //Create Root Folder
-        Folder rootFolder = new Folder();
+        Folder rootFolder = new Folder(); // Folder тоже наследуется от File и использует его методы, можно также использовать полиморфизм
         rootFolder.printInfo();
         //Create Other Folder in Root
         Folder audioFolder = new Folder("AudioFolder", rootFolder);

@@ -2,7 +2,7 @@ package lesson3.fileSystem;
 
 public class Folder extends File {
     public File[] files;
-    private int count;
+    private int count; // мертвый код
 
     public Folder() {
         super.setName("Root");
@@ -16,7 +16,7 @@ public class Folder extends File {
         super.setParentFolder(parentFolder);
     }
 
-    public void add(File file) {
+    public void add(File file) { //мертвый код
         this.files[count] = file;
     }
 }

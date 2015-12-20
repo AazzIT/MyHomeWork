@@ -15,9 +15,9 @@ public class Rosebush {
 
     public void info() {
         if (count > 0) {
-            System.out.println("Rosebush contain " + count + " roses color: " + rose[count].color + " " + rose[count].spike);
+            System.out.println("Rosebush contains " + count + " roses color: " + rose[count].color + " " + rose[count].spike);
         } else {
-            System.out.println("Rosebush not contain Roses");
+            System.out.println("Rosebush not contains Roses");
         }
     }
 }

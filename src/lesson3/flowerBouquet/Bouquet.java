@@ -17,9 +17,9 @@ public class Bouquet {
         count++;
     }
 
-    public void info() {
+    public void info() { // название метода начинается с глагола, напр. getInfo, printInfo
         System.out.println(name + " contain from: ");
-        for(int i = 0; i <= count  - 1; i++) {
+        for(int i = 0; i <= count  - 1; i++) { //в другом классе у тебя более элегантный счетчик цикла
             flowers[i].info();
         }
         System.out.println("\r\n");
