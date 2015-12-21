@@ -11,10 +11,10 @@ public class ForMain {
         System.out.println("Enter first side of Triangle: ");
         figures.setTriangleSide1(scanner.nextDouble());
         System.out.println("Enter second side of Triangle: ");
-        figures.setTriagleSide2(scanner.nextDouble());
+        figures.setTriangleSide2(scanner.nextDouble());
         System.out.println("Enter third side of Triangle: ");
-        figures.setTriagleSide3(scanner.nextDouble());
-        System.out.println("Triagle square is: " + figures.triagleSquare());
+        figures.setTriangleSide3(scanner.nextDouble());
+        System.out.println("Triangle square is: " + figures.triangleSquare());
 
         System.out.println("Enter rectangle horizontal side: ");
         figures.setRectangleHorizontalSide(scanner.nextDouble());

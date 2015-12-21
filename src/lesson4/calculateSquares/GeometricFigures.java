@@ -4,8 +4,8 @@ import static java.lang.Math.*;
 
 public class GeometricFigures {
     private double triangleSide1;
-    private double triagleSide2;
-    private double triagleSide3;
+    private double triangleSide2;
+    private double triangleSide3;
     private double rectangleHorizontalSide;
     private double rectangleVerticalSide;
     private double circleRadius;
@@ -34,20 +34,20 @@ public class GeometricFigures {
         this.triangleSide1 = triangleSide1;
     }
 
-    public double getTriagleSide2() {
-        return triagleSide2;
+    public double getTriangleSide2() {
+        return triangleSide2;
     }
 
-    public void setTriagleSide2(double triagleSide2) {
-        this.triagleSide2 = triagleSide2;
+    public void setTriangleSide2(double triagleSide2) {
+        this.triangleSide2 = triagleSide2;
     }
 
-    public double getTriagleSide3() {
-        return triagleSide3;
+    public double getTriangleSide3() {
+        return triangleSide3;
     }
 
-    public void setTriagleSide3(double triagleSide3) {
-        this.triagleSide3 = triagleSide3;
+    public void setTriangleSide3(double triagleSide3) {
+        this.triangleSide3 = triagleSide3;
     }
 
     public double getCircleRadius() {
@@ -58,9 +58,9 @@ public class GeometricFigures {
         this.circleRadius = circleRadius;
     }
 
-    public double triagleSquare() {
-        double p = (getTriangleSide1() + getTriagleSide2() + getTriagleSide3()) / 2;
-        return sqrt(p * (p - getTriangleSide1()) * (p - getTriagleSide2()) * (p - getTriagleSide3()));
+    public double triangleSquare() {
+        double p = (getTriangleSide1() + getTriangleSide2() + getTriangleSide3()) / 2;
+        return sqrt(p * (p - getTriangleSide1()) * (p - getTriangleSide2()) * (p - getTriangleSide3()));
     }
 
     public double rectangleSquare() {

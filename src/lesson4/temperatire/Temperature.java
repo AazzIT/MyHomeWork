@@ -5,7 +5,7 @@ public class Temperature {
         return celsius * 1.8 + 32;
     }
 
-    public static double toCelcius(double fahrenheit) {
+    public static double toCelsius(double fahrenheit) {
         return (fahrenheit-32)/1.8;
     }
 
