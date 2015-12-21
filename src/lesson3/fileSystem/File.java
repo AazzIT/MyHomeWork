@@ -19,7 +19,7 @@ public abstract class File {
     public String getParentFolder() {
         if (this.name.equals("Root")){
             return "root Folder ";
-        }else{
+        } else {
             return parentFolder.getName();
         }
     }
