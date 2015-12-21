@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ForMain {
     public static void main(String[] args) {
-        Scanner figuresSides = new Scanner(System.in);
+        Scanner figuresSides = new Scanner(System.in); //сканнер лучше именовать сканнером, scan, scanner
 
         GeometricFigures figures = new GeometricFigures();
 
@@ -15,7 +15,7 @@ public class ForMain {
         figures.setTriagleSide2(figuresSides.nextDouble());
 
         System.out.println("Enter third side of Triangle: ");
-        figures.setTriagleSide3(figuresSides.nextDouble());
+        figures.setTriagleSide3(figuresSides.nextDouble()); //логичней сделать так: ввели три стороны треугольника, вывели площадь. потом след. фигуры
 
         System.out.println("Enter rectangle horizontal side: ");
         figures.setRectangleHorizontalSide(figuresSides.nextDouble());

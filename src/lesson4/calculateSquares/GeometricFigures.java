@@ -3,7 +3,7 @@ package lesson4.calculateSquares;
 import static java.lang.Math.*;
 
 public class GeometricFigures {
-    private double triagleSide1;
+    private double triagleSide1; //очепятка - triangle - обращай внимание, что Идея подчеркивает и опечатки.
     private double triagleSide2;
     private double triagleSide3;
     private double rectangleHorizontalSide;
