@@ -38,7 +38,7 @@ public class GeometricFigures {
         return triangleSide2;
     }
 
-    public void setTriangleSide2(double triagleSide2) {
+    public void setTriangleSide2(double triagleSide2) {//и тут исправить
         this.triangleSide2 = triagleSide2;
     }
 
@@ -46,7 +46,7 @@ public class GeometricFigures {
         return triangleSide3;
     }
 
-    public void setTriangleSide3(double triagleSide3) {
+    public void setTriangleSide3(double triagleSide3) { // тут еще
         this.triangleSide3 = triagleSide3;
     }
 
