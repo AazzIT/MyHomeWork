@@ -3,7 +3,7 @@ package lesson4.calculateSquares;
 import static java.lang.Math.*;
 
 public class GeometricFigures {
-    private double triagleSide1; //очепятка - triangle - обращай внимание, что Идея подчеркивает и опечатки.
+    private double triangleSide1;
     private double triagleSide2;
     private double triagleSide3;
     private double rectangleHorizontalSide;
@@ -26,12 +26,12 @@ public class GeometricFigures {
         this.rectangleVerticalSide = rectangleVerticalSide;
     }
 
-    public double getTriagleSide1() {
-        return triagleSide1;
+    public double getTriangleSide1() {
+        return triangleSide1;
     }
 
-    public void setTriagleSide1(double triagleSide1) {
-        this.triagleSide1 = triagleSide1;
+    public void setTriangleSide1(double triangleSide1) {
+        this.triangleSide1 = triangleSide1;
     }
 
     public double getTriagleSide2() {
@@ -59,8 +59,8 @@ public class GeometricFigures {
     }
 
     public double triagleSquare() {
-        double p = (getTriagleSide1() + getTriagleSide2() + getTriagleSide3()) / 2;
-        return sqrt(p * (p - getTriagleSide1()) * (p - getTriagleSide2()) * (p - getTriagleSide3()));
+        double p = (getTriangleSide1() + getTriagleSide2() + getTriagleSide3()) / 2;
+        return sqrt(p * (p - getTriangleSide1()) * (p - getTriagleSide2()) * (p - getTriagleSide3()));
     }
 
     public double rectangleSquare() {

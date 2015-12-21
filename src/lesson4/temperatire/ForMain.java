@@ -8,10 +8,10 @@ public class ForMain {
 
         System.out.println("Enter Celcius degrees: ");
         double celcius = scaner.nextDouble();
-        System.out.println(Temperature.fahrenheit(celcius));
+        System.out.println(Temperature.toFahrenheit(celcius));
 
         System.out.println("Enter Fahrenheit degrees: ");
         double fahrenheit = scaner.nextDouble();
-        System.out.println(Temperature.celcius(fahrenheit));
+        System.out.println(Temperature.toCelcius(fahrenheit));
     }
 }

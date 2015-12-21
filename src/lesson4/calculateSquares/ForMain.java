@@ -9,7 +9,7 @@ public class ForMain {
         GeometricFigures figures = new GeometricFigures();
 
         System.out.println("Enter first side of Triangle: ");
-        figures.setTriagleSide1(scaner.nextDouble());
+        figures.setTriangleSide1(scaner.nextDouble());
         System.out.println("Enter second side of Triangle: ");
         figures.setTriagleSide2(scaner.nextDouble());
         System.out.println("Enter third side of Triangle: ");
