@@ -13,7 +13,7 @@ public class ForMain {
         System.out.println("Enter second side of Triangle: ");
         figures.setTriagleSide2(scaner.nextDouble());
         System.out.println("Enter third side of Triangle: ");
-        figures.setTriagleSide3(scaner.nextDouble()); //логичней сделать так: ввели три стороны треугольника, вывели площадь. потом след. фигуры
+        figures.setTriagleSide3(scaner.nextDouble());
         System.out.println("Triagle square is: " + figures.triagleSquare());
 
         System.out.println("Enter rectangle horizontal side: ");
