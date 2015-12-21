@@ -4,32 +4,27 @@ import java.util.Scanner;
 
 public class ForMain {
     public static void main(String[] args) {
-        Scanner figuresSides = new Scanner(System.in); //сканнер лучше именовать сканнером, scan, scanner
+        Scanner scaner = new Scanner(System.in);
 
         GeometricFigures figures = new GeometricFigures();
 
         System.out.println("Enter first side of Triangle: ");
-        figures.setTriagleSide1(figuresSides.nextDouble());
-
+        figures.setTriagleSide1(scaner.nextDouble());
         System.out.println("Enter second side of Triangle: ");
-        figures.setTriagleSide2(figuresSides.nextDouble());
-
+        figures.setTriagleSide2(scaner.nextDouble());
         System.out.println("Enter third side of Triangle: ");
-        figures.setTriagleSide3(figuresSides.nextDouble()); //логичней сделать так: ввели три стороны треугольника, вывели площадь. потом след. фигуры
+        figures.setTriagleSide3(scaner.nextDouble()); //логичней сделать так: ввели три стороны треугольника, вывели площадь. потом след. фигуры
+        System.out.println("Triagle square is: " + figures.triagleSquare());
 
         System.out.println("Enter rectangle horizontal side: ");
-        figures.setRectangleHorizontalSide(figuresSides.nextDouble());
+        figures.setRectangleHorizontalSide(scaner.nextDouble());
 
         System.out.println("Enter rectangle vertical side: ");
-        figures.setRectangleVerticalSide(figuresSides.nextDouble());
-
-        System.out.println("Enter round radius: ");
-        figures.setCircleRadius(figuresSides.nextDouble());
-
-        System.out.println("\r\n");
-
+        figures.setRectangleVerticalSide(scaner.nextDouble());
         System.out.println("Rectangle square is: " + figures.rectangleSquare());
-        System.out.println("Triagle square is: " + figures.triagleSquare());
-        System.out.println("Circle square is: " + figures.circleSquare() + "\r\n");
+
+        System.out.println("Enter circle radius: ");
+        figures.setCircleRadius(scaner.nextDouble());
+        System.out.println("Circle square is: " + figures.circleSquare() + "\n");
     }
 }
