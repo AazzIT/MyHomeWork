@@ -12,21 +12,18 @@ public class MergeSort {
     }
 
     private static void merge(int[] array, int lo, int mid, int hi) {
-        int[] sortedArray = new int[array.length];
-        for (int i = 0; i < array.length; i++) {
-            sortedArray[i] = array[i];
-        }
+        int[] tempArray = array.clone();
         int i = lo;
         int j = mid + 1;
         for (int n = lo; n <= hi; n++) {
             if (i > mid) {
-                array[n] = sortedArray[j++];
+                array[n] = tempArray[j++];
             } else if (j > hi) {
-                array[n] = sortedArray[i++];
-            } else if (sortedArray[i] > sortedArray[j]) {
-                array[n] = sortedArray[j++];
+                array[n] = tempArray[i++];
+            } else if (tempArray[i] > tempArray[j]) {
+                array[n] = tempArray[j++];
             } else {
-                array[n] = sortedArray[i++];
+                array[n] = tempArray[i++];
             }
         }
     }
