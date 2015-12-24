@@ -13,9 +13,8 @@ public class ForMain {
         array = MergeSort.mergeSort(array);
 
         System.out.println("\n\nArray after sorting: ");
-        for(int i = 0; i < array.length; i++) {//можно for each, идея подсвечивает
-            System.out.print(array[i] + " ");
+        for(int arrElement:array) {
+            System.out.print(arrElement + " ");
         }
-        System.out.println("");
     }
 }
