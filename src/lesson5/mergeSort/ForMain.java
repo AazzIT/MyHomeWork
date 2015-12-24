@@ -1,19 +1,22 @@
 package lesson5.mergeSort;
 
+import java.util.Random;
+
 public class ForMain {
     public static void main(String[] args) {
-        int[] array = new int[20];
+        int[] array = new int[30];
+        Random generator = new Random();
 
         System.out.println("Array before sorting: ");
-        for(int i = 0; i < array.length; i++) { //пробел после слова for
-            array[i] = (int) Math.round(Math.random() * 100);
+        for (int i = 0; i < array.length; i++) {
+            array[i] = generator.nextInt(100);
             System.out.print(array[i] + " ");
         }
 
-        array = MergeSort.mergeSort(array);
+        MergeSort.mergeSort(array, 0, array.length - 1);
 
         System.out.println("\n\nArray after sorting: ");
-        for(int arrElement:array) {
+        for (int arrElement:array) {
             System.out.print(arrElement + " ");
         }
     }

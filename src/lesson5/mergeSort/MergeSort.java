@@ -1,51 +1,33 @@
 package lesson5.mergeSort;
 
 public class MergeSort {
-    public static int[] mergeSort(int[] array) {
-        if(array.length != 1) {
-            int mid = array.length/2;
-            int[] arrayA = new int[mid];
-            int[] arrayB = new int[array.length - arrayA.length];
-
-            for (int i = 0; i < array.length; i++) {
-                if (i < mid) {
-                    arrayA[i] = array[i];
-                } else {
-                    arrayB[i - mid] = array[i];
-                }
-            }
-            arrayA = mergeSort(arrayA);
-            arrayB = mergeSort(arrayB);
-            array = merge(arrayA, arrayB);
-            return array;
+    public static void mergeSort(int[] array, int lo, int hi) {
+        if (hi <= lo) {
+            return;
         }
-        return array;
+        int mid = lo + (hi - lo) / 2;
+        mergeSort(array, lo, mid);
+        mergeSort(array, mid + 1, hi);
+        merge(array, lo, mid, hi);
     }
 
-    public static int[] merge(int[] arrayA, int[] arrayB) {
-        int[] array = new int[arrayA.length + arrayB.length];
-        int n = 0;
-        int m = 0;
-        for(int i = 0; i < array.length; i++) {
-            if (n==arrayA.length) {//между операндом и оператором плиз пробел
-                array[i] = arrayB[m];
-                m++;
-            } else if(m==arrayB.length) {
-                array[i] = arrayA[n];
-                n++;
-            } else if(arrayA[n]>arrayB[m]) {
-                array[i] = arrayB[m];
-                m++;
+    private static void merge(int[] array, int lo, int mid, int hi) {
+        int[] sortedArray = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            sortedArray[i] = array[i];
+        }
+        int i = lo;
+        int j = mid + 1;
+        for (int n = lo; n <= hi; n++) {
+            if (i > mid) {
+                array[n] = sortedArray[j++];
+            } else if (j > hi) {
+                array[n] = sortedArray[i++];
+            } else if (sortedArray[i] > sortedArray[j]) {
+                array[n] = sortedArray[j++];
             } else {
-                array[i] = arrayA[n];
-                n++;
+                array[n] = sortedArray[i++];
             }
         }
-        return array;
     }
-
-    //как-то ты нестандартно решил этот алгоритм)))
-    //ты используешь слишком много временных массивов, они при каждом заходе рекурсии создаются и создаются - это все память.
-    //поищи, как еще можно этот метод сортировки сделать более выгодным по производительности и меньше занимает памяти.
-    //подсказка - используй индексы массива, чтобы оперировать, каким диапазоном массива ты сейчас занимаешься.
 }
