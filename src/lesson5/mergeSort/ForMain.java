@@ -13,7 +13,8 @@ public class ForMain {
             System.out.print(array[i] + " ");
         }
 
-        MergeSort.mergeSort(array, 0, array.length - 1);
+        MergeSort.mergeSort(array, 0, array.length - 1); //Сделай, плиз, так, чтобы в пераметрах передавался только массив
+        //остальные переменные можно получить уже внутри этого метода.
 
         System.out.println("\n\nArray after sorting: ");
         for (int arrElement:array) {
