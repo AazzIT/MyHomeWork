@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class ForMain {
     public static void main(String[] args) {
-        int[] array = new int[30];
+        int[] array = new int[20];
         Random generator = new Random();
 
         System.out.println("Array before sorting: ");
