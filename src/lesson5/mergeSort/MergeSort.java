@@ -1,6 +1,10 @@
 package lesson5.mergeSort;
 
 public class MergeSort {
+    public static void mergeSort(int[] array) {
+        mergeSort(array, 0, array.length - 1);
+    }
+
     public static void mergeSort(int[] array, int lo, int hi) {
         if (hi > lo) {
             int mid = lo + (hi - lo) / 2;
