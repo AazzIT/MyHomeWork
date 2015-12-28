@@ -1,7 +1,7 @@
 package lesson6.flowerBouquet;
 
 public class ForMain {
-    public static void main(String[] args) throws FullBouquetException {
+    public static void main(String[] args)  {
         //Create Flowers
         Rose roseOne = new Rose("red","with spike");
         Rose roseTwo = new Rose("red","with spike");
@@ -11,12 +11,16 @@ public class ForMain {
         Flower chamomile = new Chamomile("white");
         //Add flower to Bouquet
         Bouquet bouquet = new Bouquet("Bouquet", roseOne);
-        bouquet.addFlower(roseThree);
-        bouquet.addFlower(aster);
-        bouquet.addFlower(chamomile);
-        bouquet.addFlower(tulip);
-        //Print info about Bouquet
-        bouquet.getInfo();
+        try {
+            bouquet.addFlower(roseThree);
+            bouquet.addFlower(aster);
+            bouquet.addFlower(chamomile);
+            bouquet.addFlower(tulip);
+            //Print info about Bouquet
+            bouquet.getInfo();
+        } catch (FullBouquetException e1) {
+            System.out.println("\n" + e1.getMessage());
+        }
         //Add rose to Rosebush
         Rosebush rosebush = new Rosebush();
         rosebush.include(roseOne);
@@ -26,7 +30,11 @@ public class ForMain {
         rosebush.info();
         //Try call IllegalStateException
         Flower aster2 = new Aster("white");
-        bouquet.addFlower(aster2);
+        try {
+            bouquet.addFlower(aster2);
+        } catch (FullBouquetException e1) {
+            System.out.println("\n" + e1.getMessage());
+        }
         try {
             bouquet.getInfo();
         } catch (IllegalStateException ex) {

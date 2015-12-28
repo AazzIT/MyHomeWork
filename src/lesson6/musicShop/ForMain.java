@@ -1,7 +1,7 @@
 package lesson6.musicShop;
 
 public class ForMain {
-    public static void main(String[] args) throws FullShowCaseException { //ты ловишь этот эксепшн в кече, не надо его пробрасывать выше
+    public static void main(String[] args) {
         MusicalInstrument guitar = new Guitar();
         MusicalInstrument piano = new Piano();
         MusicalInstrument trumpet = new Trumpet();
@@ -12,10 +12,14 @@ public class ForMain {
         } catch (IllegalArgumentException e) {
             System.out.println("\n" + e.getMessage() + "\n");
         }
-        musicShop.addToShowcase(guitar);
-        musicShop.addToShowcase(piano);
-        musicShop.addToShowcase(trumpet);
-        musicShop.getInfo();
+        try {
+            musicShop.addToShowcase(guitar);
+            musicShop.addToShowcase(piano);
+            musicShop.addToShowcase(trumpet);
+            musicShop.getInfo();
+        } catch (FullShowCaseException e1) {
+            System.out.println("\n" + e1.getMessage());
+        }
         //Try call FullShowCaseException
         try {
             for (int i = 0; i <= 11; i++) {
