@@ -24,7 +24,15 @@ public class ForMain {
         rosebush.include(roseThree);
         //Print info about Rosebush
         rosebush.info();
-        //Try call Exception
+        //Try call IllegalStateException
+        Flower aster2 = new Aster("white");
+        bouquet.addFlower(aster2);
+        try {
+            bouquet.getInfo();
+        } catch (IllegalStateException ex) {
+            System.out.println("\n" + ex.getMessage());
+        }
+        //Try call FullBouquetException
         try {
             for (int i = 0; i <= 11; i++) {
                 bouquet.addFlower(new Aster("Yellow"));
