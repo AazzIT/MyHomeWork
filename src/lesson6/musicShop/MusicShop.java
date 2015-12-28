@@ -1,5 +1,7 @@
 package lesson6.musicShop;
 
+import java.io.NotActiveException;
+
 public class MusicShop {
     public String name;
     private MusicalInstrument[] musicalInstruments;
@@ -10,9 +12,12 @@ public class MusicShop {
         this.musicalInstruments = new MusicalInstrument[10];
     }
 
-    public void addToShowcase(MusicalInstrument musicInstrument) {
-        this.musicalInstruments[count] = musicInstrument;
-        count++;
+    public void addToShowcase(MusicalInstrument musicInstrument) throws FullShowCaseException {
+        try {
+            this.musicalInstruments[count++] = musicInstrument;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            throw new FullShowCaseException("[Error]: ShoeCase is Full!");
+        }
     }
 
     public void getInfo() {
@@ -21,9 +26,9 @@ public class MusicShop {
             for(int i = 0; i < count; i++) {
                 musicalInstruments[i].info();
             }
-            System.out.println("\r\n");
+            System.out.println("\n");
         } else {
-            System.out.println(name + "shop is empty");
+            throw new IllegalArgumentException("[Warning]: Shop is empty!");
         }
     }
 }

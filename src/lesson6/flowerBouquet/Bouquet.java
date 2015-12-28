@@ -16,7 +16,7 @@ public class Bouquet {
         try {
             this.flowers[count++] = flower;
         } catch (ArrayIndexOutOfBoundsException e) {
-            throw new FullBouquetException("Bouquet is Full!");
+            throw new FullBouquetException("[Error]: Bouquet is Full!");
         }
     }
 
@@ -27,7 +27,7 @@ public class Bouquet {
                 flowers[i].info();
             }
         } else if (count % 2 == 0) {
-            throw new IllegalStateException("Bouquet can not contain even number of flowers ! ");
+            throw new IllegalStateException("[Warning]: Bouquet can not contain even number of flowers ! ");
         }
         System.out.println("\r\n");
     }
