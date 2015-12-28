@@ -2,7 +2,7 @@ package lesson6.fileSystem;
 
 public class ForMain {
     public static void main(String[] args)  {
-        //Create Root Folder
+        //Create Root Folder.
         File rootFolder = new Folder();
         rootFolder.printInfo();
         //Create Other Folder in Root
