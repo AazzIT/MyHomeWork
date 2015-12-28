@@ -12,15 +12,22 @@ public class Bouquet {
         count = 1;
     }
 
-    public void addFlower(Flower flower) {
-        this.flowers[count] = flower;
-        count++;
+    public void addFlower(Flower flower) throws FullBouquetException {
+        try {
+            this.flowers[count++] = flower;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            throw new FullBouquetException("Bouquet is Full!");
+        }
     }
 
     public void getInfo() {
         System.out.println(name + " contain from: ");
-        for(int i = 0; i <= count  - 1; i++) {
-            flowers[i].info();
+        if (count % 2 == 1) {
+            for (int i = 0; i <= count - 1; i++) {
+                flowers[i].info();
+            }
+        } else if (count % 2 == 0) {
+            throw new IllegalStateException(" Bouquet can not contain even number of flowers ! ");
         }
         System.out.println("\r\n");
     }

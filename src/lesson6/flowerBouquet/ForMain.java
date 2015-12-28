@@ -1,7 +1,7 @@
 package lesson6.flowerBouquet;
 
 public class ForMain {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FullBouquetException {
         //Create Flowers
         Rose roseOne = new Rose("red","with spike");//розы тоже цветы, обделил полиморфизмом))
         Rose roseTwo = new Rose("red","with spike");
@@ -24,5 +24,15 @@ public class ForMain {
         rosebush.include(roseThree);
         //Print info about Rosebush
         rosebush.info();
+        //Try call Exception
+        try {
+            for (int i = 0; i <= 11; i++) {
+                bouquet.addFlower(new Aster("Yellow"));
+            }
+        } catch (FullBouquetException e) {
+            System.out.println("\n" + e.getMessage());
+        }
+
+
     }
 }
