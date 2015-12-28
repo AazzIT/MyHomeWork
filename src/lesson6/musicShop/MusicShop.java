@@ -1,9 +1,9 @@
 package lesson6.musicShop;
 
-import java.io.NotActiveException;
+import java.io.NotActiveException; //мертвый импорт - за борт
 
 public class MusicShop {
-    public String name;
+    public String name; //ПАЧИМУУУ паблик?))
     private MusicalInstrument[] musicalInstruments;
     private int count;
 

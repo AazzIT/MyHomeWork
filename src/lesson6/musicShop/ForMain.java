@@ -1,7 +1,7 @@
 package lesson6.musicShop;
 
 public class ForMain {
-    public static void main(String[] args) throws FullShowCaseException {
+    public static void main(String[] args) throws FullShowCaseException { //ты ловишь этот эксепшн в кече, не надо его пробрасывать выше
         MusicalInstrument guitar = new Guitar();
         MusicalInstrument piano = new Piano();
         MusicalInstrument trumpet = new Trumpet();

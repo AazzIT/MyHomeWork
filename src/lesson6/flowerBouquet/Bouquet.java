@@ -1,7 +1,7 @@
 package lesson6.flowerBouquet;
 
 public class Bouquet {
-    public String name;
+    public String name; //почему публичные переменные? А как же инкапсуляция?
     public Flower[] flowers;
     private int count;
 
@@ -26,7 +26,7 @@ public class Bouquet {
             for (int i = 0; i <= count - 1; i++) {
                 flowers[i].info();
             }
-        } else if (count % 2 == 0) {
+        } else if (count % 2 == 0) { // можно упустить второй иф, оставить только элс
             throw new IllegalStateException("[Warning]: Bouquet can not contain even number of flowers!");
         }
         System.out.println("\r\n");
