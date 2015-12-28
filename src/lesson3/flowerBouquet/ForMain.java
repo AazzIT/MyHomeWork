@@ -3,7 +3,7 @@ package lesson3.flowerBouquet;
 public class ForMain {
     public static void main(String[] args) {
         //Create Flowers
-        Rose roseOne = new Rose("red","with spike");//розы тоже цветы, обделил полиморфизмом))
+        Rose roseOne = new Rose("red","with spike");
         Rose roseTwo = new Rose("red","with spike");
         Rose roseThree = new Rose("red","with spike");
         Flower aster = new Aster("white");
