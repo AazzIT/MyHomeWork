@@ -21,8 +21,8 @@ public class Bouquet {
     }
 
     public void getInfo() {
-        System.out.println(name + " contain from: ");
         if (count % 2 == 1) {
+            System.out.println(name + " contain from: ");
             for (int i = 0; i <= count - 1; i++) {
                 flowers[i].info();
             }
