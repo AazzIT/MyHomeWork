@@ -1,9 +1,7 @@
 package lesson6.musicShop;
 
-import java.io.NotActiveException; //мертвый импорт - за борт
-
 public class MusicShop {
-    public String name; //ПАЧИМУУУ паблик?))
+    private String name;
     private MusicalInstrument[] musicalInstruments;
     private int count;
 
@@ -20,7 +18,7 @@ public class MusicShop {
         }
     }
 
-    public void getInfo() {
+    public void getInfo()  {
         System.out.println("MusicShop \"" + name + "\" sells: ");
         if (count > 0) {
             for(int i = 0; i < count; i++) {
