@@ -1,7 +1,9 @@
 package lesson6.musicShop;
 
 public class Piano extends MusicalInstrument {
+    public static final String PIANO_NAME = "Piano";
+
     public Piano() {
-        super.name = "Piano"; //здесь Хардкод, но изменять нельзя чтобы не потерять смысл задачи.
+        super.name = PIANO_NAME; //здесь Хардкод "Piano" в константу хотя смысл этого загадочен %)
     }
 }

@@ -20,7 +20,7 @@ public class Bouquet {
         }
     }
 
-    public void getInfo() {
+    public void info() {
         if (count % 2 == 1) {
             System.out.println(name + " contain from: ");
             for (int i = 0; i <= count - 1; i++) {

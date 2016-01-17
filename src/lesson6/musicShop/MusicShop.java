@@ -18,7 +18,7 @@ public class MusicShop {
         }
     }
 
-    public void getInfo()  {
+    public void info()  {
         System.out.println("MusicShop \"" + name + "\" sells: ");
         if (count > 0) {
             for(int i = 0; i < count; i++) {

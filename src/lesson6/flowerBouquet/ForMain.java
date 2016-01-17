@@ -1,23 +1,29 @@
 package lesson6.flowerBouquet;
 
 public class ForMain {
+    public static final String COLOR_RED = "red";
+    public static final String COLOR_WHITE = "white";
+    public static final String COLOR_YELLOW = "yellow";
+    public static final String WITH_SPIKE = "with spike";
+    public static final String BOUQUET_NAME = "Bouquet";
+
     public static void main(String[] args)  {
         //Create Flowers
-        Rose roseOne = new Rose("red","with spike");
-        Rose roseTwo = new Rose("red","with spike");
-        Rose roseThree = new Rose("red","with spike");
-        Flower aster = new Aster("white");
-        Flower tulip = new Tulip("yellow");
-        Flower chamomile = new Chamomile("white");
+        Rose roseOne = new Rose(COLOR_RED,WITH_SPIKE);//хардкод
+        Rose roseTwo = new Rose(COLOR_RED,WITH_SPIKE);//хардкод
+        Rose roseThree = new Rose(COLOR_RED,WITH_SPIKE);//хардкод
+        Flower aster = new Aster(COLOR_WHITE);//хардкод
+        Flower tulip = new Tulip(COLOR_YELLOW);//хардкод
+        Flower chamomile = new Chamomile(COLOR_WHITE);//хардкод
         //Add flower to Bouquet
-        Bouquet bouquet = new Bouquet("Bouquet", roseOne);
+        Bouquet bouquet = new Bouquet(BOUQUET_NAME, roseOne);//хардкод
         try {
             bouquet.addFlower(roseThree);
             bouquet.addFlower(aster);
             bouquet.addFlower(chamomile);
             bouquet.addFlower(tulip);
             //Print info about Bouquet
-            bouquet.getInfo();
+            bouquet.info();
         } catch (FullBouquetException e1) {
             System.out.println("\n" + e1.getMessage());
         }
@@ -29,21 +35,21 @@ public class ForMain {
         //Print info about Rosebush
         rosebush.info();
         //Try call IllegalStateException
-        Flower aster2 = new Aster("white");
+        Flower aster2 = new Aster(COLOR_WHITE);//Хардкод
         try {
             bouquet.addFlower(aster2);
         } catch (FullBouquetException e1) {
             System.out.println("\n" + e1.getMessage());
         }
         try {
-            bouquet.getInfo();
+            bouquet.info();
         } catch (IllegalStateException ex) {
             System.out.println("\n" + ex.getMessage());
         }
         //Try call FullBouquetException
         try {
             for (int i = 0; i <= 11; i++) {
-                bouquet.addFlower(new Aster("Yellow"));
+                bouquet.addFlower(new Aster(COLOR_YELLOW)); //хардкод
             }
         } catch (FullBouquetException e) {
             System.out.println("\n" + e.getMessage());

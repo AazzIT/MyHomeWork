@@ -1,7 +1,9 @@
 package lesson6.musicShop;
 
 public class Guitar extends MusicalInstrument {
+    public static final String GUITAR_NAME = "Guitar";
+
     public Guitar() {
-        super.name = "Guitar"; //здесь Хардкод, но изменять нельзя чтобы не потерять смысл задачи.
+        super.name = GUITAR_NAME; //здесь Хардкод "Guitar" в константу хотя смысл этого загадочен %)
     }
 }

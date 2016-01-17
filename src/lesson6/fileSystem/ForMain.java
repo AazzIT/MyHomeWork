@@ -4,35 +4,35 @@ public class ForMain {
     public static void main(String[] args)  {
         //Create Root Folder.
         File rootFolder = new Folder();
-        rootFolder.printInfo();
+        rootFolder.info();
         //Create Other Folder in Root
         File audioFolder = new Folder("AudioFolder", rootFolder);
-        audioFolder.printInfo();
+        audioFolder.info();
         //Create Audio File in AudioFolder
         try {
             File rock = new AudioFile("Rock.mp3", audioFolder);
-            rock.printInfo();
+            rock.info();
         } catch (IllegalStateException e1) {
             System.out.println("\n" + e1.getMessage());
         }
         //Create Picture File in AudioFolder
         try {
             File logoCD = new PictureFile("LogoCD.gif", audioFolder);
-            logoCD.printInfo();
+            logoCD.info();
         } catch (IllegalStateException e1) {
             System.out.println("\n" + e1.getMessage());
         }
         //Create Audio File in Root Folder
         try {
             File blues = new AudioFile("Blues.mp3", rootFolder);
-            blues.printInfo();
+            blues.info();
         } catch (IllegalStateException e1) {
             System.out.println("\n" + e1.getMessage());
         }
         //Create Text File in AudioFolder
         try {
             File textOfSong = new TextFile("TextOfSong.txt", audioFolder);
-            textOfSong.printInfo();
+            textOfSong.info();
         } catch (IllegalStateException e1) {
             System.out.println("\n" + e1.getMessage());
         }
