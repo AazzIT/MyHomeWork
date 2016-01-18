@@ -12,8 +12,10 @@ public class ForMain {
         Folder audioFolder = new Folder("AudioFiles");
         rootFolder.addFile(audioFolder);
 
-        audioFolder.addFile(new AudioFile("Blues.mp3"));
         audioFolder.addFile(new AudioFile("Rock.mp3"));
+        audioFolder.addFile(new AudioFile("Blues.mp3"));
+        audioFolder.addFile(new AudioFile("Jazz.mp3"));
+        audioFolder.addFile(new AudioFile("Classic.mp3"));
 
         pictureFolder.addFile(new PictureFile("LogoCD.gif"));
 
@@ -24,6 +26,9 @@ public class ForMain {
         System.out.println();
 
         audioFolder.dir();
+        System.out.println();
+
+        audioFolder.dirSortedByName();
         System.out.println();
 
         pictureFolder.dir();
