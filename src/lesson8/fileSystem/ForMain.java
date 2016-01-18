@@ -8,7 +8,7 @@ public class ForMain {
         rootFolder.addFile(audioFolder);
 
         Folder pictureFolder = new Folder("PictureFiles");
-        rootFolder.addFile(audioFolder);
+        rootFolder.addFile(pictureFolder);
 
         rootFolder.addFile(new TextFile("TextOfSong.txt"));
 

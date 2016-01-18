@@ -18,6 +18,7 @@ public class Folder extends File {
     }
 
     public void dir() {
+        System.out.println(super.getName() + " /");
         filesList
                 .forEach(System.out::println);
     }
