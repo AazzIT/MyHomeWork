@@ -6,7 +6,7 @@ public class Flower {
 
     @Override
     public String toString() {
-        return "Flower{" +
+        return "Flower {" +
                 "name='" + name + '\'' +
                 ", color='" + color + '\'' +
                 '}';

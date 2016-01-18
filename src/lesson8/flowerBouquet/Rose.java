@@ -11,7 +11,7 @@ public class Rose extends Flower {
 
     @Override
     public String toString() {
-        return "Flower{" +
+        return "Flower {" +
                 "name='" + name + '\'' +
                 ", color='" + color + '\'' +
                 ", spike='" + spike + '\'' +
