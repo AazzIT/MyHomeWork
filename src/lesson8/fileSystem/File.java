@@ -22,7 +22,6 @@ public abstract class File {
     @Override
     public String toString() {
         return  "    type='" + type + '\'' +
-                "name='" + name + '\'' +
-                '}';
+                " name='" + name + '\'';
     }
 }
