@@ -14,10 +14,12 @@ public class ForMain {
         bouquet.addFlower(new Aster(COLOR_WHITE));
         bouquet.addFlower(new Tulip(COLOR_YELLOW));
         bouquet.info();
+        System.out.println();
 
         bouquet.removeFlower();
         bouquet.removeFlower();
         bouquet.info();
+        System.out.println();
 
         Rosebush rosebush = new Rosebush();
         rosebush.include(new Rose(COLOR_WHITE,WITHOUT_SPIKE));
