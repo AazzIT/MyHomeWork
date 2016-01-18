@@ -17,7 +17,7 @@ public class Rosebush {
 
     public void info() {
         if (flowersList.size() > 0) {
-            System.out.println("Rosebush contains ");
+            System.out.println("Rosebush contains from: ");
             flowersList
                     .forEach(System.out::println);
         } else {

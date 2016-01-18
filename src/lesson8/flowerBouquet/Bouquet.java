@@ -23,7 +23,7 @@ public class Bouquet {
     }
 
     public void info() {
-        System.out.println(name + " contain from: ");
+        System.out.println(name + " contains from: ");
         flowersList
                 .forEach(System.out::println);
     }
