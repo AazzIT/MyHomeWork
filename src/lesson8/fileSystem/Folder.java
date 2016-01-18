@@ -2,6 +2,7 @@ package lesson8.fileSystem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Folder extends File {
     File[] files = {};
@@ -20,6 +21,18 @@ public class Folder extends File {
     public void dir() {
         System.out.println(super.getName() + " /");
         filesList
+                .forEach(System.out::println);
+    }
+
+    public void dirSortedByName() {
+        Comparator<File> byFileName = (f1, f2) -> f1
+                .getName()
+                .compareTo(f2
+                        .getName());
+        System.out.println(super.getName() + " /");
+        filesList
+                .stream()
+                .sorted(byFileName)
                 .forEach(System.out::println);
     }
 }
