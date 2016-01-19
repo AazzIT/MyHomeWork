@@ -7,6 +7,7 @@ import java.util.Comparator;
 public class Folder extends File {
     File[] files = {};
     ArrayList<File> filesList;
+    Comparator<File> byFileName;
 
     public Folder(String name) {
         super.setName(name);
@@ -25,7 +26,7 @@ public class Folder extends File {
     }
 
     public void dirSortedByName() {
-        Comparator<File> byFileName = (f1, f2) -> f1
+        byFileName = (f1, f2) -> f1
                 .getName()
                 .compareTo(f2
                         .getName());
