@@ -12,7 +12,7 @@ public class Folder extends File {
     public Folder(String name) {
         super.setName(name);
         super.setType("Folder");
-        this.filesList = new ArrayList<>(Arrays.asList(files));
+        this.filesList = new ArrayList<>(Arrays.asList(files));//а зачем нам вообще массив?
     }
 
     public void addFile(File file) {

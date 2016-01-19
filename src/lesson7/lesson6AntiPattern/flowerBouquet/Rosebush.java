@@ -6,7 +6,7 @@ public class Rosebush {
 
     public Rosebush() {
        rose = new Rose[10];
-    }
+    }//меджик намбер - 10
 
     public void include(Rose rose) {
         this.rose[count + 1] = rose;

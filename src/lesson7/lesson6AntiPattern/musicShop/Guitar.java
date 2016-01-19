@@ -6,4 +6,5 @@ public class Guitar extends MusicalInstrument {
     public Guitar() {
         super.name = GUITAR_NAME; //здесь Хардкод "Guitar" в константу хотя смысл этого загадочен %)
     }
+    //разве что использовать эту константу еще где-то в других классах
 }
