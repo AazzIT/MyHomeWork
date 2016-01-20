@@ -45,12 +45,12 @@ public abstract class File {
         this.name = name;
     }
 
-    // View Information about our File(or Folder))
-    protected void info(){//Уже говорили, принт выносим в мейн, а в таком методе можно формировать строку, и возвращать строку
-        //которую и будешь распечатывать в мейне.
-        System.out.println("My Name is " + this.getName());
-        System.out.println("My Folder -  " + this.getParentFolder());
-        System.out.println(this.getType());
-        System.out.println();
+    @Override
+    public String toString() {
+        return " File {" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", parentFolder=" + parentFolder +
+                "}";
     }
 }

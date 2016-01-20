@@ -47,6 +47,6 @@ public abstract class File {
                 "name='" + name + '\'' +
                 ", type='" + type + '\'' +
                 ", parentFolder=" + parentFolder +
-                '}';
+                "}";
     }
 }
