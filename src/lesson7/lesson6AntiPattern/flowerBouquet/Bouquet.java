@@ -20,15 +20,17 @@ public class Bouquet {
         }
     }
 
-    public void info() {
+    @Override
+    public String toString() {
+        String result;
         if (count % 2 == 1) {
-            System.out.println(name + " contain from: ");
+            result = name + " contain from: ";
             for (int i = 0; i <= count - 1; i++) {
-                flowers[i].info();
+                result += "\r\n" + flowers[i];
             }
         } else {
             throw new IllegalStateException("[Warning]: Bouquet can not contain even number of flowers!");
         }
-        System.out.println("\r\n");
+        return result + "\r\n";
     }
 }

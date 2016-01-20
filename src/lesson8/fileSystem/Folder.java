@@ -1,18 +1,16 @@
 package lesson8.fileSystem;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 
 public class Folder extends File {
-    File[] files = {};
     ArrayList<File> filesList;
     Comparator<File> byFileName;
 
     public Folder(String name) {
         super.setName(name);
         super.setType("Folder");
-        this.filesList = new ArrayList<>(Arrays.asList(files));//а зачем нам вообще массив?
+        this.filesList = new ArrayList<>();
     }
 
     public void addFile(File file) {

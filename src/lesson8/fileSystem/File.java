@@ -1,5 +1,7 @@
 package lesson8.fileSystem;
 
+import java.util.ArrayList;
+
 public abstract class File {
     private String name;
     private String type;

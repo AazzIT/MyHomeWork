@@ -5,7 +5,7 @@ public class Rose extends Flower {
     public static final String ROSE_NAME = "Rose";
 
     public Rose(String color, String spike) {
-        super.name = ROSE_NAME; //хардкод
+        super.name = ROSE_NAME;
         super.color = color;
         this.spike = spike;
     }

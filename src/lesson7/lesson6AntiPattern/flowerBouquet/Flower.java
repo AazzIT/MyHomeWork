@@ -4,7 +4,11 @@ public class Flower {
     public String name;
     public String color;
 
-    public void info() {
-        System.out.println("Flower: " + name+ " color:" + color);
+    @Override
+    public String toString() {
+        return "Flower {" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                '}';
     }
 }

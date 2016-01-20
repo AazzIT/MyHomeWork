@@ -18,15 +18,16 @@ public class MusicShop {
         }
     }
 
-    public void info()  {
-        System.out.println("MusicShop \"" + name + "\" sells: ");
+    @Override
+    public String toString() {
+        String result = "MusicShop \"" + name + "\" sells: ";
         if (count > 0) {
             for(int i = 0; i < count; i++) {
-                musicalInstruments[i].info();
+                result += "\r\n" + musicalInstruments[i].toString() + "\r\n";
             }
-            System.out.println("\n");
         } else {
             throw new IllegalArgumentException("[Warning]: Shop is empty!");
         }
+        return result;
     }
 }

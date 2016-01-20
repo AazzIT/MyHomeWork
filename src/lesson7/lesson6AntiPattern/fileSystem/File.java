@@ -17,17 +17,13 @@ public abstract class File {
     protected File() {
     }
 
-    public String getType() {
-        return type;
-    }
-
     public void setType(String type) {
         this.type = type;
     }
 
     public String getParentFolder() {
-        if (this.name.equals(ROOT_FOLDER_TYPE)){ //Хардкод
-            return "root Folder ";
+        if (this.name.equals(ROOT_FOLDER_TYPE)){
+            return ROOT_FOLDER_TYPE;
         } else {
             return parentFolder.getName();
         }
@@ -45,11 +41,12 @@ public abstract class File {
         this.name = name;
     }
 
-    // View Information about our File(or Folder))
-    protected void info(){
-        System.out.println("My Name is " + this.getName());
-        System.out.println("My Folder -  " + this.getParentFolder());
-        System.out.println(this.getType());
-        System.out.println();
+    @Override
+    public String toString() {
+        return "File {" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", parentFolder=" + parentFolder +
+                '}';
     }
 }

@@ -5,20 +5,22 @@ import java.util.Arrays;
 
 public class MusicShop {
     public String name;
-    MusicalInstrument[] instruments = {};
     ArrayList<MusicalInstrument> instrumentsList;
 
     public MusicShop(String name) {
         this.name = name;
-        this.instrumentsList = new ArrayList<>(Arrays.asList(instruments));
+        this.instrumentsList = new ArrayList<>();
     }
 
     public void addToShowcase(MusicalInstrument musicInstrument) {
         instrumentsList.add(musicInstrument);
     }
 
-    public void removeFromShowcase() {
-        instrumentsList.remove(instrumentsList.size() - 1);
+    public void removeFromShowcase(MusicalInstrument musicalInstrument) {
+        instrumentsList
+                .stream()
+                .filter(instrument -> !musicalInstrument.getClass().getName().equals(instrument.getClass().getName()))
+                .forEach(System.out::println);
     }
 
     public void info() {

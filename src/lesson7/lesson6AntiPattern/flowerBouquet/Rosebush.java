@@ -1,23 +1,25 @@
 package lesson7.lesson6AntiPattern.flowerBouquet;
 
 public class Rosebush {
+    public static final int ROSE_COUNT = 10;
     public Rose[] rose;
     private int count;
 
     public Rosebush() {
-       rose = new Rose[10];
-    }//меджик намбер - 10
+       rose = new Rose[ROSE_COUNT];
+    }
 
     public void include(Rose rose) {
         this.rose[count + 1] = rose;
         count++;
     }
 
-    public void info() {
+    @Override
+    public String toString() {
         if (count > 0) {
-            System.out.println("Rosebush contains " + count + " roses color: " + rose[count].color + " " + rose[count].spike);
+            return "Rosebush contains " + count + " roses color: " + rose[count].color + " " + rose[count].spike;
         } else {
-            System.out.println("Rosebush not contains Roses");
+            return "Rosebush not contains Roses";
         }
     }
 }
