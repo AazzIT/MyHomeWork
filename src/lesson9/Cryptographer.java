@@ -4,29 +4,43 @@ public class Cryptographer {
     public static final int ALPHABET_COUNT = 26;
     public static final int ASCII_CODE_A = 65;
     public static final int ASCII_CODE_a = 97;
-    //public static StringBuilder intervalOfChars = new StringBuilder().append("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    public static StringBuilder intervalOfChars = new StringBuilder().append("abcdefghijklmnopqrstuvwxyz");
+    public static StringBuilder alphabet = new StringBuilder().append("abcdefghijklmnopqrstuvwxyz");
 
-    public static String encrypt (String stringForEncrypt, int encryptCode) {
+    public static String encrypt (String stringForEncrypt, int cryptPower) {
         String resultString = "";
         for (int i = 0; i < stringForEncrypt.length(); i++) {
-            if ((int) stringForEncrypt.charAt(i) >= 97) {
-                resultString += (char) (ASCII_CODE_a + (intervalOfChars.indexOf(String.valueOf(stringForEncrypt.charAt(i))) + encryptCode) % ALPHABET_COUNT);
+            if ((int) stringForEncrypt.charAt(i) >= ASCII_CODE_a) {
+                resultString += (char) (ASCII_CODE_a + (alphabet
+                        .indexOf(String
+                                .valueOf(stringForEncrypt
+                                        .charAt(i))) + cryptPower) % ALPHABET_COUNT);
             } else {
-                resultString += (char) (ASCII_CODE_A + (intervalOfChars.indexOf(String.valueOf(Character.toLowerCase(stringForEncrypt.charAt(i)))) + encryptCode) % ALPHABET_COUNT);
+                resultString += (char) (ASCII_CODE_A + (alphabet
+                        .indexOf(String
+                                .valueOf(Character
+                                        .toLowerCase(stringForEncrypt
+                                                .charAt(i)))) + cryptPower) % ALPHABET_COUNT);
             }
         }
         return resultString;
     }
 
-    public static String decrypt (String stringForEncrypt, int encryptCode) {
+    public static String decrypt (String stringForEncrypt, int cryptPower) {
         String resultString = "";
         for (int i = 0; i < stringForEncrypt.length(); i++) {
-            if ((int) stringForEncrypt.charAt(i) >= 97) {
-                resultString += (char) (ASCII_CODE_a + (intervalOfChars.indexOf(String.valueOf(stringForEncrypt.charAt(i))) - encryptCode) % ALPHABET_COUNT);
+            if ((int) stringForEncrypt.charAt(i) >= ASCII_CODE_a) {
+                resultString += (char) (ASCII_CODE_a + (alphabet
+                        .indexOf(String
+                                .valueOf(stringForEncrypt
+                                        .charAt(i))) - cryptPower + ALPHABET_COUNT *
+                        (1 + cryptPower/ALPHABET_COUNT)) % ALPHABET_COUNT);
             } else {
-                int count = (intervalOfChars.indexOf(String.valueOf(Character.toLowerCase(stringForEncrypt.charAt(i)))) - encryptCode) % ALPHABET_COUNT;
-
+                int count = (alphabet
+                        .indexOf(String
+                                .valueOf(Character
+                                        .toLowerCase(stringForEncrypt
+                                                .charAt(i)))) - cryptPower + ALPHABET_COUNT *
+                        (1 + cryptPower/ALPHABET_COUNT)) % ALPHABET_COUNT;
                 resultString += (char) (ASCII_CODE_A + count);
             }
         }
