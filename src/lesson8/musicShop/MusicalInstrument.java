@@ -5,7 +5,7 @@ public class MusicalInstrument {
 
     public void info() {
         System.out.println("   " + name);
-    }
+    } //по сути методы info и toString выполняют одну функцию. Можно лишнее убрать.
 
     @Override
     public String toString() {

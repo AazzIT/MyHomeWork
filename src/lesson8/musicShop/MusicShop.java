@@ -20,6 +20,9 @@ public class MusicShop {
         instrumentsList
                 .stream()
                 .filter(instrument -> !musicalInstrument.getClass().getName().equals(instrument.getClass().getName()))
+                //вот это паровоз!))) если тут выскочит ошибка, ты можешь не найти, в каком из вызванных методов она возникла.
+                //эти вещи можно разбить и присвоить временным переменным, так и читать будет проще.
+                //Иначе не соблюдается закон Деметры - гуглим
                 .forEach(System.out::println);
     }
 

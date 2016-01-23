@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class Folder extends File {
-    ArrayList<File> filesList;
+    ArrayList<File> filesList;// если это возможно - используйте полиморфизм List<File> list = new ArrayList<>;
     Comparator<File> byFileName;
 
     public Folder(String name) {
@@ -17,13 +17,13 @@ public class Folder extends File {
         filesList.add(file);
     }
 
-    public void dir() {
+    public void dir() { //а что это имя метода обозначает? напоминаю, что имя метода должно начинаться с глагола
         System.out.println(super.getName() + " /");
         filesList
                 .forEach(System.out::println);
     }
 
-    public void dirSortedByName() {
+    public void dirSortedByName() { //также имя метода должно начинаться с глагола
         byFileName = (f1, f2) -> f1
                 .getName()
                 .compareTo(f2

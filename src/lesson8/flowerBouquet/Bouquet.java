@@ -22,7 +22,7 @@ public class Bouquet {
         flowersList.remove(flowersList.size() - 1);
     }
 
-    public void info() {
+    public void info() {// Уже не раз говорила, что принт надо выносить в мейн-метод. А такой метод может возвращать строку.
         System.out.println(name + " contains from: ");
         flowersList
                 .forEach(System.out::println);

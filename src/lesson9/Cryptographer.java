@@ -6,7 +6,7 @@ public class Cryptographer {
     public static final int ASCII_CODE_a = 97;
     public static StringBuilder alphabet = new StringBuilder().append("abcdefghijklmnopqrstuvwxyz");
 
-    public static String encrypt (String stringForEncrypt, int cryptPower) {
+    public static String encrypt (String stringForEncrypt, int cryptPower) { //лишний пробел между именем метода и скобкой
         String resultString = "";
         for (int i = 0; i < stringForEncrypt.length(); i++) {
             if ((int) stringForEncrypt.charAt(i) >= ASCII_CODE_a) {
@@ -23,7 +23,7 @@ public class Cryptographer {
             }
         }
         return resultString;
-    }
+    } //кто тебя таким переносам научил?)))) Читать очень сложно. паровозы нереальные
 
     public static String decrypt (String stringForEncrypt, int cryptPower) {
         String resultString = "";

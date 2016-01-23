@@ -1,7 +1,7 @@
 package lesson8.flowerBouquet;
 
 public class Flower {
-    public String name;
+    public String name; //Лучше бы хотя бы protected поля сделать
     public String color;
 
     @Override
