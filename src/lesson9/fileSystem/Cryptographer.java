@@ -12,6 +12,8 @@ public class Cryptographer {
         for (int i = 0; i < stringForEncrypt.length(); i++) {
 
             if (((int) stringForEncrypt.charAt(i) >= ASCII_CODE_a) & ((int) stringForEncrypt.charAt(i) <= ASCII_CODE_a + ALPHABET_COUNT)) {
+                //Такой иф очень сложно читать - длинно. Можно вынести до ифа в отдельные булевые переменные каждую из частей "и"
+                //И тогда в самом ифе указывать только эти переменные
                 charNumberInAlphabet = getCharNumberInAlphabetForEncrypt(stringForEncrypt.charAt(i),cryptPower);
                 resultString += (char) (ASCII_CODE_a + charNumberInAlphabet);
             } else if (((int) stringForEncrypt.charAt(i) >= ASCII_CODE_A) & ((int) stringForEncrypt.charAt(i) <= ASCII_CODE_A + ALPHABET_COUNT)){
@@ -42,7 +44,7 @@ public class Cryptographer {
     }
 
     private static int getCharNumberInAlphabetForEncrypt(char charForEncrypt, int cryptPower) {
-        String charInAlphabet;
+        String charInAlphabet; //не нужно отдельно объявлять переменную, если ты ей тут же будешь присваивать значение
         int charNumberInAlphabet;
         charForEncrypt = Character.toLowerCase(charForEncrypt);
         charInAlphabet = String.valueOf(charForEncrypt);

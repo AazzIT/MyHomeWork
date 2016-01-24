@@ -20,7 +20,8 @@ public class Folder extends File {
     }
 
     public String listOfFiles() {
-        String returnString;
+        String returnString; //не нужно объявление переменной выносить в отдельную строку, если ты ей же присваиваешь значение
+        //на строку ниже и не в каком-то блоке
         returnString = super.getName() + " /";
         for (File file : filesList) {
             returnString += "\n" + file.toString();

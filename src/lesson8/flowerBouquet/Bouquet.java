@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Bouquet {
     private String name;
-    private ArrayList<Flower> flowersList;
+    private ArrayList<Flower> flowersList; // полиморфизм List<>
 
     public Bouquet(String name, Flower flower) {
         this.name = name;

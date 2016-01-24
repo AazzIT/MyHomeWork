@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class MusicShop {
     private String name;
-    private ArrayList<MusicalInstrument> instrumentsList;
+    private ArrayList<MusicalInstrument> instrumentsList; //Полиморфизм List<>
 
     public MusicShop(String name) {
         this.name = name;

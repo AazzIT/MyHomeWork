@@ -3,7 +3,7 @@ package lesson8.flowerBouquet;
 import java.util.ArrayList;
 
 public class Rosebush {
-    private ArrayList<Rose> rosesList;
+    private ArrayList<Rose> rosesList; //Полиморфизм List<>
 
     public Rosebush() {
         this.rosesList = new ArrayList<>();

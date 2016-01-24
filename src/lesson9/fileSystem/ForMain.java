@@ -32,6 +32,7 @@ public class ForMain {
         System.out.println(audioFolder.listOfFiles());
         System.out.println();
         //Encrypt list of Files
+        //вынеси в консоль объяснение, что сделано для каждого блока - шифр, дешифр, сорт...
         encryptString = Cryptographer.encrypt(audioFolder.listOfFiles(), CRYPT_POWER);
         System.out.println(encryptString);
         System.out.println();

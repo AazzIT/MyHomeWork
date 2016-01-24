@@ -19,8 +19,8 @@ public class Folder extends File {
         filesList.add(file);
     }
 
-    public String listOfFiles() {
-        String returnString;
+    public String listOfFiles() { //тоже название без глагола
+        String returnString;//продолжаем объединять объявление и присваивание. Зачем нам лишняя строка?
         returnString = super.getName() + " /";
         for (File file : filesList) {
             returnString += "\n" + file.toString();
