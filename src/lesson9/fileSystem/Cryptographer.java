@@ -1,4 +1,4 @@
-package lesson9;
+package lesson9.fileSystem;
 
 public class Cryptographer {
     public static final int ALPHABET_COUNT = 26;
@@ -10,12 +10,15 @@ public class Cryptographer {
         String resultString = "";
         int charNumberInAlphabet;
         for (int i = 0; i < stringForEncrypt.length(); i++) {
-            if ((int) stringForEncrypt.charAt(i) >= ASCII_CODE_a) {
+
+            if (((int) stringForEncrypt.charAt(i) >= ASCII_CODE_a) & ((int) stringForEncrypt.charAt(i) <= ASCII_CODE_a + ALPHABET_COUNT)) {
                 charNumberInAlphabet = getCharNumberInAlphabetForEncrypt(stringForEncrypt.charAt(i),cryptPower);
                 resultString += (char) (ASCII_CODE_a + charNumberInAlphabet);
-            } else {
+            } else if (((int) stringForEncrypt.charAt(i) >= ASCII_CODE_A) & ((int) stringForEncrypt.charAt(i) <= ASCII_CODE_A + ALPHABET_COUNT)){
                 charNumberInAlphabet = getCharNumberInAlphabetForEncrypt(stringForEncrypt.charAt(i),cryptPower);
                 resultString += (char) (ASCII_CODE_A + charNumberInAlphabet);
+            } else {
+                resultString += stringForEncrypt.charAt(i);
             }
         }
         return resultString;
@@ -25,12 +28,14 @@ public class Cryptographer {
         String resultString = "";
         int charNumberInAlphabet;
         for (int i = 0; i < stringForEncrypt.length(); i++) {
-            if ((int) stringForEncrypt.charAt(i) >= ASCII_CODE_a) {
+            if (((int) stringForEncrypt.charAt(i) >= ASCII_CODE_a) & ((int) stringForEncrypt.charAt(i) <= ASCII_CODE_a + ALPHABET_COUNT)) {
                 charNumberInAlphabet = getCharNumberInAlphabetForDecrypt(stringForEncrypt.charAt(i),cryptPower);
                 resultString += (char) (ASCII_CODE_a + charNumberInAlphabet);
-            } else {
+            } else if (((int) stringForEncrypt.charAt(i) >= ASCII_CODE_A) & ((int) stringForEncrypt.charAt(i) <= ASCII_CODE_A + ALPHABET_COUNT)){
                 charNumberInAlphabet = getCharNumberInAlphabetForDecrypt(stringForEncrypt.charAt(i),cryptPower);
                 resultString += (char) (ASCII_CODE_A + charNumberInAlphabet);
+            } else {
+                resultString += stringForEncrypt.charAt(i);
             }
         }
         return resultString;
