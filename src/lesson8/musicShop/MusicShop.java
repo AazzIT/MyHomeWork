@@ -3,7 +3,7 @@ package lesson8.musicShop;
 import java.util.ArrayList;
 
 public class MusicShop {
-    protected String name;
+    private String name;
     private ArrayList<MusicalInstrument> instrumentsList;
 
     public MusicShop(String name) {
@@ -16,20 +16,18 @@ public class MusicShop {
     }
 
     public void removeFromShowcase(MusicalInstrument musicalInstrument) {
-        String nameInstrumentClass;
-        nameInstrumentClass = musicalInstrument.toString();
-        for (MusicalInstrument instrument : instrumentsList) {
-            if (instrument.toString().equals(nameInstrumentClass)) {
-                instrumentsList.remove(instrument);
-            }
-        }
+        String nameInstrument = musicalInstrument.getClass().getName();
+        instrumentsList
+                .stream()
+                .filter(instrument -> !nameInstrument.equals(instrument.getClass().getName()))
+                .forEach(System.out::println);
     }
 
     public String info() {
         String returnString;
         returnString = "MusicShop \"" + name + "\" sells: ";
         for (MusicalInstrument musicalInstrument : instrumentsList) {
-            returnString = "\n" + musicalInstrument.toString();
+            returnString += "\n" + musicalInstrument.toString();
         }
         return returnString;
     }
