@@ -19,19 +19,19 @@ public class ForMain {
 
         pictureFolder.addFile(new PictureFile("LogoCD.gif"));
 
-        System.out.println(rootFolder.listOfFiles());
+        System.out.println(rootFolder.showListOfFiles());
         System.out.println();
 
-        System.out.println(rootFolder.listOfFilesSortedByName());
+        System.out.println(rootFolder.showListOfFilesSortedByName());
         System.out.println();
 
-        System.out.println(audioFolder.listOfFiles());
+        System.out.println(audioFolder.showListOfFiles());
         System.out.println();
 
-        System.out.println(audioFolder.listOfFilesSortedByName());
+        System.out.println(audioFolder.showListOfFilesSortedByName());
         System.out.println();
 
-        System.out.println(pictureFolder.listOfFiles());
+        System.out.println(pictureFolder.showListOfFiles());
         System.out.println();
     }
 }

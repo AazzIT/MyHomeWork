@@ -16,11 +16,6 @@ public class ForMain {
         System.out.println(bouquet.info());
         System.out.println();
 
-        bouquet.removeFlower();
-        bouquet.addFlower(new Chamomile(COLOR_WHITE));
-        System.out.println(bouquet.info());
-        System.out.println();
-
         Rosebush rosebush = new Rosebush();
         rosebush.include(new Rose(COLOR_WHITE,WITHOUT_SPIKE));
         rosebush.include(new Rose(COLOR_WHITE,WITHOUT_SPIKE));

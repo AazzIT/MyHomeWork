@@ -1,9 +1,10 @@
 package lesson8.flowerBouquet;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Rosebush {
-    private ArrayList<Rose> rosesList; //Полиморфизм List<>
+    private List<Rose> rosesList;
 
     public Rosebush() {
         this.rosesList = new ArrayList<>();

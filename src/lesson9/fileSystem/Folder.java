@@ -19,18 +19,16 @@ public class Folder extends File {
         filesList.add(file);
     }
 
-    public String listOfFiles() { //тоже название без глагола
-        String returnString;//продолжаем объединять объявление и присваивание. Зачем нам лишняя строка?
-        returnString = super.getName() + " /";
+    public String showListOfFiles() {
+        String returnString = super.getName() + " /";
         for (File file : filesList) {
             returnString += "\n" + file.toString();
         }
         return returnString;
     }
 
-    public String listOfFilesSortedByName() {
-        String returnString;
-        returnString = super.getName() + " /";
+    public String showListOfFilesSortedByName() {
+        String returnString = super.getName() + " /";
         byFileName = (f1, f2) -> f1
                 .getName()
                 .compareTo(f2

@@ -22,29 +22,28 @@ public class ForMain {
         audioFolder.addFile(new AudioFile("Classic.mp3"));
 
         pictureFolder.addFile(new PictureFile("LogoCD.gif"));
-
-        System.out.println(rootFolder.listOfFiles());
+        System.out.println("Вывод информации о содержимом папки Root");
+        System.out.println(rootFolder.showListOfFiles());
         System.out.println();
-
-        System.out.println(rootFolder.listOfFilesSortedByName());
+        System.out.println("Сортировка и вывод информации о содержимом папки Root");
+        System.out.println(rootFolder.showListOfFilesSortedByName());
         System.out.println();
-
-        System.out.println(audioFolder.listOfFiles());
+        System.out.println("Вывод информации о содержимом папки с аудиофайлами");
+        System.out.println(audioFolder.showListOfFiles());
         System.out.println();
-        //Encrypt list of Files
-        //вынеси в консоль объяснение, что сделано для каждого блока - шифр, дешифр, сорт...
-        encryptString = Cryptographer.encrypt(audioFolder.listOfFiles(), CRYPT_POWER);
+        System.out.println("Шифрование вывода информации о содержании папки с аудиофайлами");
+        encryptString = Cryptographer.encrypt(audioFolder.showListOfFiles(), CRYPT_POWER);
         System.out.println(encryptString);
         System.out.println();
-        //Decrypt list of Files
+        System.out.println("Дешифрование вывода информации о содержании папки с аудиофайлами");
         decryptString = Cryptographer.decrypt(encryptString, CRYPT_POWER);
         System.out.println(decryptString);
         System.out.println();
-        //Sort and list by Filename
-        System.out.println(audioFolder.listOfFilesSortedByName());
+        System.out.println("Сортировка и вывод информации о содержимом папки с аудиофайлами");
+        System.out.println(audioFolder.showListOfFilesSortedByName());
         System.out.println();
-
-        System.out.println(pictureFolder.listOfFiles());
+        System.out.println("Вывод информации о содержимом папки с рисунками");
+        System.out.println(pictureFolder.showListOfFiles());
         System.out.println();
     }
 }

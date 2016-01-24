@@ -1,10 +1,11 @@
 package lesson8.musicShop;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MusicShop {
     private String name;
-    private ArrayList<MusicalInstrument> instrumentsList; //Полиморфизм List<>
+    private List<MusicalInstrument> instrumentsList;
 
     public MusicShop(String name) {
         this.name = name;
@@ -15,17 +16,8 @@ public class MusicShop {
         instrumentsList.add(musicInstrument);
     }
 
-    public void removeFromShowcase(MusicalInstrument musicalInstrument) {
-        String nameInstrument = musicalInstrument.getClass().getName();
-        instrumentsList
-                .stream()
-                .filter(instrument -> !nameInstrument.equals(instrument.getClass().getName()))
-                .forEach(System.out::println);
-    }
-
     public String info() {
-        String returnString;
-        returnString = "MusicShop \"" + name + "\" sells: ";
+        String returnString = "MusicShop \"" + name + "\" sells: ";
         for (MusicalInstrument musicalInstrument : instrumentsList) {
             returnString += "\n" + musicalInstrument.toString();
         }

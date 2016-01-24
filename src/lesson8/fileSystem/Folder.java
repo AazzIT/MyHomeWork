@@ -19,19 +19,16 @@ public class Folder extends File {
         filesList.add(file);
     }
 
-    public String listOfFiles() {
-        String returnString; //не нужно объявление переменной выносить в отдельную строку, если ты ей же присваиваешь значение
-        //на строку ниже и не в каком-то блоке
-        returnString = super.getName() + " /";
+    public String showListOfFiles() {
+        String returnString = super.getName() + " /";
         for (File file : filesList) {
             returnString += "\n" + file.toString();
         }
         return returnString;
     }
 
-    public String listOfFilesSortedByName() {
-        String returnString;
-        returnString = super.getName() + " /";
+    public String showListOfFilesSortedByName() {
+        String returnString = super.getName() + " /";
         byFileName = (f1, f2) -> f1
                 .getName()
                 .compareTo(f2

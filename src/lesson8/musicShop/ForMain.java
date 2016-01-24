@@ -12,8 +12,5 @@ public class ForMain {
         musicShop.addToShowcase(new Piano());
         System.out.println(musicShop.info());
         System.out.println();
-        musicShop.removeFromShowcase(new Piano());
-        System.out.println();
-        musicShop.removeFromShowcase(new Trumpet());
     }
 }

@@ -1,10 +1,11 @@
 package lesson8.flowerBouquet;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Bouquet {
     private String name;
-    private ArrayList<Flower> flowersList; // полиморфизм List<>
+    private List<Flower> flowersList;
 
     public Bouquet(String name, Flower flower) {
         this.name = name;
@@ -16,13 +17,8 @@ public class Bouquet {
         this.flowersList.add(flower);
     }
 
-    public void removeFlower() {
-        flowersList.remove(flowersList.size() - 1);
-    }
-
     public String info() {
-        String returnString;
-        returnString = name + " contains from: ";
+        String returnString = name + " contains from: ";
         for (Flower flower : flowersList) {
             returnString += "\n" + flower.toString();
         }
