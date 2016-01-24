@@ -1,16 +1,14 @@
 package lesson8.flowerBouquet;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Bouquet {
-    public String name;
-    Flower[] flowers = {};
-    ArrayList<Flower> flowersList;
+    private String name;
+    private ArrayList<Flower> flowersList;
 
     public Bouquet(String name, Flower flower) {
         this.name = name;
-        this.flowersList = new ArrayList<>(Arrays.asList(flowers));
+        this.flowersList = new ArrayList<>();
         this.flowersList.add(flower);
     }
 
@@ -22,9 +20,12 @@ public class Bouquet {
         flowersList.remove(flowersList.size() - 1);
     }
 
-    public void info() {// Уже не раз говорила, что принт надо выносить в мейн-метод. А такой метод может возвращать строку.
-        System.out.println(name + " contains from: ");
-        flowersList
-                .forEach(System.out::println);
+    public String info() {
+        String returnString;
+        returnString = name + " contains from: ";
+        for (Flower flower : flowersList) {
+            returnString += "\n" + flower.toString();
+        }
+        return returnString;
     }
 }

@@ -1,32 +1,28 @@
 package lesson8.flowerBouquet;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Rosebush {
-    Flower[] flowers = {}; //что-то у тебя во всех классах потерялась инкапсуляция на поля класса.. Все нужно private, или
-    //в крайнем случае protected
-    ArrayList<Flower> flowersList;
+    private ArrayList<Rose> flowersList;
 
     public Rosebush() {
-        this.flowersList = new ArrayList<>(Arrays.asList(flowers));
-    } //зачем нужен массив, который ты
-    //тут же переносишь в лист?
+        this.flowersList = new ArrayList<>();
+    }
 
-    public void include(Flower rose) {
+    public void include(Rose rose) {
         this.flowersList.add(rose);
     }
 
-    public void info() {
+    public String info() {
+        String returnString;
         if (flowersList.size() > 0) {
-            System.out.println("Rosebush contains from: ");
-            flowersList
-                    .forEach(System.out::println);
+            returnString = "Rosebush contains from: ";
+            for (Rose rose : flowersList) {
+                returnString += "\n" + rose.toString();
+            }
         } else {
-            System.out.println("Rosebush not contains Roses");
+            returnString = "Rosebush not contains Roses";
         }
+        return returnString;
     }
-
-    //Потеряла логику. У тебя есть куст роз, который зачем-то добавляет входящие извне розы в лист цветов.
-    //По-моему, куст роз содержит розы, класс цветок тут не должен фигурировать.
 }

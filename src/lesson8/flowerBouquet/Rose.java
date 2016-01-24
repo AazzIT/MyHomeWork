@@ -1,7 +1,7 @@
 package lesson8.flowerBouquet;
 
 public class Rose extends Flower {
-    public String spike;
+    protected String spike;
 
     public Rose(String color, String spike) {
         super.name = "Rose";

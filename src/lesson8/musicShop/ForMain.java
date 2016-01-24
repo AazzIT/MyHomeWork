@@ -9,7 +9,7 @@ public class ForMain {
         musicShop.addToShowcase(new Trumpet());
         musicShop.addToShowcase(new Piano());
         musicShop.addToShowcase(new Piano());
-        musicShop.info();
+        System.out.println(musicShop.info());
         System.out.println();
         musicShop.removeFromShowcase(new Piano());
         System.out.println();

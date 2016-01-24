@@ -1,8 +1,6 @@
 package lesson8.fileSystem;
 
-import java.util.ArrayList; //подчищаем неиспользуемые импорты
-
-public abstract class File { //а почему класс абстрактный? нет ни одного абстрактного метода
+public class File {
     private String name;
     private String type;
 

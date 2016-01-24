@@ -1,8 +1,8 @@
 package lesson8.flowerBouquet;
 
 public class Flower {
-    public String name; //Лучше бы хотя бы protected поля сделать
-    public String color;
+    protected String name;
+    protected String color;
 
     @Override
     public String toString() {

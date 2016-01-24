@@ -13,18 +13,18 @@ public class ForMain {
         bouquet.addFlower(new Rose(COLOR_RED,WITH_SPIKE));
         bouquet.addFlower(new Aster(COLOR_WHITE));
         bouquet.addFlower(new Tulip(COLOR_YELLOW));
-        bouquet.info();
+        System.out.println(bouquet.info());
         System.out.println();
 
         bouquet.removeFlower();
-        bouquet.removeFlower();
-        bouquet.info();
+        bouquet.addFlower(new Chamomile(COLOR_WHITE));
+        System.out.println(bouquet.info());
         System.out.println();
 
         Rosebush rosebush = new Rosebush();
         rosebush.include(new Rose(COLOR_WHITE,WITHOUT_SPIKE));
         rosebush.include(new Rose(COLOR_WHITE,WITHOUT_SPIKE));
         rosebush.include(new Rose(COLOR_WHITE,WITHOUT_SPIKE));
-        rosebush.info();
+        System.out.println(rosebush.info());
     }
 }

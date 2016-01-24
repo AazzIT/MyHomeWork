@@ -1,11 +1,10 @@
 package lesson8.musicShop;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class MusicShop {
-    public String name;
-    ArrayList<MusicalInstrument> instrumentsList;
+    protected String name;
+    private ArrayList<MusicalInstrument> instrumentsList;
 
     public MusicShop(String name) {
         this.name = name;
@@ -17,18 +16,21 @@ public class MusicShop {
     }
 
     public void removeFromShowcase(MusicalInstrument musicalInstrument) {
-        instrumentsList
-                .stream()
-                .filter(instrument -> !musicalInstrument.getClass().getName().equals(instrument.getClass().getName()))
-                //вот это паровоз!))) если тут выскочит ошибка, ты можешь не найти, в каком из вызванных методов она возникла.
-                //эти вещи можно разбить и присвоить временным переменным, так и читать будет проще.
-                //Иначе не соблюдается закон Деметры - гуглим
-                .forEach(System.out::println);
+        String nameInstrumentClass;
+        nameInstrumentClass = musicalInstrument.toString();
+        for (MusicalInstrument instrument : instrumentsList) {
+            if (instrument.toString().equals(nameInstrumentClass)) {
+                instrumentsList.remove(instrument);
+            }
+        }
     }
 
-    public void info() {
-        System.out.println("MusicShop \"" + name + "\" sells: ");
-        instrumentsList
-                .forEach(System.out::println);
+    public String info() {
+        String returnString;
+        returnString = "MusicShop \"" + name + "\" sells: ";
+        for (MusicalInstrument musicalInstrument : instrumentsList) {
+            returnString = "\n" + musicalInstrument.toString();
+        }
+        return returnString;
     }
 }
