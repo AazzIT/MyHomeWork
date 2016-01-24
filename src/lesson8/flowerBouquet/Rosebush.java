@@ -3,21 +3,21 @@ package lesson8.flowerBouquet;
 import java.util.ArrayList;
 
 public class Rosebush {
-    private ArrayList<Rose> flowersList;
+    private ArrayList<Rose> rosesList;
 
     public Rosebush() {
-        this.flowersList = new ArrayList<>();
+        this.rosesList = new ArrayList<>();
     }
 
     public void include(Rose rose) {
-        this.flowersList.add(rose);
+        this.rosesList.add(rose);
     }
 
     public String info() {
         String returnString;
-        if (flowersList.size() > 0) {
+        if (rosesList.size() > 0) {
             returnString = "Rosebush contains from: ";
-            for (Rose rose : flowersList) {
+            for (Rose rose : rosesList) {
                 returnString += "\n" + rose.toString();
             }
         } else {

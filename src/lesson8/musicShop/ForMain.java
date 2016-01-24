@@ -1,8 +1,9 @@
 package lesson8.musicShop;
 
 public class ForMain {
+    public static final String SHOP_NAME = "Symphony";
     public static void main(String[] args) {
-        MusicShop musicShop = new MusicShop("Symphony");
+        MusicShop musicShop = new MusicShop(SHOP_NAME);
         musicShop.addToShowcase(new Guitar());
         musicShop.addToShowcase(new Piano());
         musicShop.addToShowcase(new Trumpet());
