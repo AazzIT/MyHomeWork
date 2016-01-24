@@ -1,4 +1,4 @@
-package lesson9.fileSystem;
+package lesson10.fileSystem;
 
 public class Cryptographer {
     public static final int ALPHABET_COUNT = 26;
