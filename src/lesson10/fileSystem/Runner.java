@@ -4,13 +4,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.FileAlreadyExistsException;
-import java.nio.file.FileSystemNotFoundException;
 
 public class Runner {
     public static final int CRYPT_POWER = 114;
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         StringBuilder text = new StringBuilder().append("... Ad cogitandum et agendum homo natus est ...");
         FileReader inputStream = null;
         FileWriter outputStream = null;
@@ -41,9 +39,6 @@ public class Runner {
                 outputStream.close();
             }
         }
-
         System.out.println();
-
-
     }
 }
