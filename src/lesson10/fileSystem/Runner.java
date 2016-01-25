@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.channels.Pipe;
 
 public class Runner {
     public static final int CRYPT_POWER = 114;
@@ -12,6 +13,7 @@ public class Runner {
         StringBuilder text = new StringBuilder().append("... Ad cogitandum et agendum homo natus est ...");
         FileReader inputStream = null;
         FileWriter outputStream = null;
+        System.out.println("Not encrypted string for write to file: " + text);
         try {
             outputStream = new FileWriter("Encode.txt");
             for (int i = 0; i < text.length(); i++) {
@@ -26,11 +28,12 @@ public class Runner {
                 text.append((char) c);
             }
             inputStream.close();
-            System.out.println(Cryptographer.decrypt(text.toString(), CRYPT_POWER));
+            System.out.println("Encrypted string read from file: " + text);
+            System.out.println("Decrypted string read from file: " + Cryptographer.decrypt(text.toString(), CRYPT_POWER));
         } catch (FileNotFoundException e) {
             System.out.println("Error: File not found!" + e);
         } catch (IOException e) {
-            System.out.println("Error: Что-то пошло не так!" + e);
+            System.out.println("Error: Something is wrong....!" + e);
         } finally {
             if (inputStream != null) {
                 inputStream.close();
