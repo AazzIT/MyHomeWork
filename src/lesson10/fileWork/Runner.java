@@ -1,10 +1,9 @@
-package lesson10.fileSystem;
+package lesson10.fileWork;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.channels.Pipe;
 
 public class Runner {
     public static final int CRYPT_POWER = 114;
