@@ -6,7 +6,8 @@ public class Cryptographer {
     public static final int ASCII_CODE_a = 97;
     public static StringBuilder alphabet = new StringBuilder().append("abcdefghijklmnopqrstuvwxyz");
 
-    public static String encrypt(String stringForEncrypt, int cryptPower) {
+    public static String encrypt(String stringForEncrypt, int cryptPower) { //можно подумать о рефакторинге этих двух методов
+        //вынести дублирование кода
         String resultString = "";
         int charNumberInAlphabet;
         int charASCIIForEncrypt;
@@ -36,7 +37,7 @@ public class Cryptographer {
         String resultString = "";
         int charNumberInAlphabet;
         int charASCIIForEncrypt;
-        boolean isCharASCIICodeUppera;
+        boolean isCharASCIICodeUppera; //плиз переименуй на more и less
         boolean isCharASCIICodeLowera;
         boolean isCharASCIICodeUpperA;
         boolean isCharASCIICodeLowerA;

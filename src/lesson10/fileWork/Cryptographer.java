@@ -1,6 +1,6 @@
 package lesson10.fileWork;
 
-public class Cryptographer {
+public class Cryptographer { //здесь исправить то же, что и в модуле 9
     public static final int ALPHABET_COUNT = 26;
     public static final int ASCII_CODE_A = 65;
     public static final int ASCII_CODE_a = 97;
