@@ -6,31 +6,12 @@ public class Cryptographer {
     public static final int ASCII_CODE_a = 97;
     public static StringBuilder alphabet = new StringBuilder().append("abcdefghijklmnopqrstuvwxyz");
 
-    public static String encrypt(String stringForEncrypt, int cryptPower) { //посчитай, сколько у тебя одинаковых строк в
-        //методах encrypt и decrypt и сколько разных. Надо-надо выносить дублирование кода!!!
+    public static String crypt(String stringForEncrypt, int cryptPower, boolean forCrypt) {
         String resultString = "";
         int charNumberInAlphabet;
         int charASCIIForEncrypt;
         for (int i = 0; i < stringForEncrypt.length(); i++) {
-            charNumberInAlphabet = getCharNumberInAlphabetForEncrypt(stringForEncrypt.charAt(i),cryptPower);
-            charASCIIForEncrypt = (int) stringForEncrypt.charAt(i);
-            if (isLetter(charASCIIForEncrypt) & (charASCIIForEncrypt >= ASCII_CODE_a)) {
-                resultString += (char) (ASCII_CODE_a + charNumberInAlphabet);
-            } else if (isLetter(charASCIIForEncrypt) & (charASCIIForEncrypt >= ASCII_CODE_A)){
-                resultString += (char) (ASCII_CODE_A + charNumberInAlphabet);
-            } else {
-                resultString += stringForEncrypt.charAt(i);
-            }
-        }
-        return resultString;
-    }
-
-    public static String decrypt(String stringForEncrypt, int cryptPower) {
-        String resultString = "";
-        int charNumberInAlphabet;
-        int charASCIIForEncrypt;
-        for (int i = 0; i < stringForEncrypt.length(); i++) {
-            charNumberInAlphabet = getCharNumberInAlphabetForDecrypt(stringForEncrypt.charAt(i),cryptPower);
+            charNumberInAlphabet = getCharNumberInAlphabet(stringForEncrypt.charAt(i), cryptPower, forCrypt);
             charASCIIForEncrypt = (int) stringForEncrypt.charAt(i);
             if (isLetter(charASCIIForEncrypt) & (charASCIIForEncrypt >= ASCII_CODE_a)) {
                 resultString += (char) (ASCII_CODE_a + charNumberInAlphabet);
@@ -55,18 +36,14 @@ public class Cryptographer {
         return isCharASCIICodeMorea & isCharASCIICodeLessa || isCharASCIICodeMoreA & isCharASCIICodeLessA;
     }
 
-    private static int getCharNumberInAlphabetForEncrypt(char charForEncrypt, int cryptPower) {//и сколько общего между этим
-        // и ниже методом - разница в одну строку. Может тоже можно что-то выделить общее в отдельный метод?
+    private static int getCharNumberInAlphabet(char charForEncrypt, int cryptPower, boolean forCrypt) {
         charForEncrypt = Character.toLowerCase(charForEncrypt);
         String charInAlphabet = String.valueOf(charForEncrypt);
         int charNumberInAlphabet = alphabet.indexOf(charInAlphabet);
-        return (charNumberInAlphabet + cryptPower) % ALPHABET_COUNT;
-    }
-
-    private static int getCharNumberInAlphabetForDecrypt(char charForEncrypt, int cryptPower) {
-        charForEncrypt = Character.toLowerCase(charForEncrypt);
-        String charInAlphabet = String.valueOf(charForEncrypt);
-        int charNumberInAlphabet = alphabet.indexOf(charInAlphabet);
-        return (charNumberInAlphabet - cryptPower + ALPHABET_COUNT * (1 + cryptPower/ALPHABET_COUNT)) % ALPHABET_COUNT;
+        if (forCrypt) {
+            return (charNumberInAlphabet + cryptPower) % ALPHABET_COUNT;
+        } else {
+            return (charNumberInAlphabet - cryptPower + ALPHABET_COUNT * (1 + cryptPower/ALPHABET_COUNT)) % ALPHABET_COUNT;
+        }
     }
 }
