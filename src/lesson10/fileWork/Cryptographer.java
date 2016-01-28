@@ -6,7 +6,8 @@ public class Cryptographer {
     public static final int ASCII_CODE_a = 97;
     public static StringBuilder alphabet = new StringBuilder().append("abcdefghijklmnopqrstuvwxyz");
 
-    public static String encrypt(String stringForEncrypt, int cryptPower) {
+    public static String encrypt(String stringForEncrypt, int cryptPower) { //посчитай, сколько у тебя одинаковых строк в
+        //методах encrypt и decrypt и сколько разных. Надо-надо выносить дублирование кода!!!
         String resultString = "";
         int charNumberInAlphabet;
         int charASCIIForEncrypt;
@@ -54,7 +55,8 @@ public class Cryptographer {
         return isCharASCIICodeMorea & isCharASCIICodeLessa || isCharASCIICodeMoreA & isCharASCIICodeLessA;
     }
 
-    private static int getCharNumberInAlphabetForEncrypt(char charForEncrypt, int cryptPower) {
+    private static int getCharNumberInAlphabetForEncrypt(char charForEncrypt, int cryptPower) {//и сколько общего между этим
+        // и ниже методом - разница в одну строку. Может тоже можно что-то выделить общее в отдельный метод?
         charForEncrypt = Character.toLowerCase(charForEncrypt);
         String charInAlphabet = String.valueOf(charForEncrypt);
         int charNumberInAlphabet = alphabet.indexOf(charInAlphabet);

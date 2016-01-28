@@ -21,3 +21,4 @@ public class Runner {
         System.out.println();
     }
 }
+//ООО!!! Мейн - то, что нужно!!! Отлично!!
