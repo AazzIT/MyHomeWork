@@ -4,7 +4,7 @@ public class Runner {
     public static final int CRYPT_POWER = 114;
     public static final String FILE_NAME = "CryptedText.txt";
     public static boolean ENCRYPT = true;
-    public static boolean DECRYPT = true;
+    public static boolean DECRYPT = false;
 
     public static void main(String[] args) {
         String text = "... Ad cogitandum et agendum homo natus est ...";
