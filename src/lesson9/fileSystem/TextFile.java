@@ -1,4 +1,4 @@
-package lesson9.fileSystem;
+package lesson9.filesystem;
 
 public class TextFile extends File {
     public TextFile(String name) {

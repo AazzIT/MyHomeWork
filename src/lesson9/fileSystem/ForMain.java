@@ -1,4 +1,4 @@
-package lesson9.fileSystem;
+package lesson9.filesystem;
 
 public class ForMain {
     public static final int CRYPT_POWER = 114;

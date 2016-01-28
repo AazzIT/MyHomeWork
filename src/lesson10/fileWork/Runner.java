@@ -1,4 +1,4 @@
-package lesson10.fileWork;
+package lesson10.filework;
 
 public class Runner {
     public static final int CRYPT_POWER = 114;

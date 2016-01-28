@@ -1,4 +1,4 @@
-package lesson9.fileSystem;
+package lesson9.filesystem;
 
 public class AudioFile extends File {
     public AudioFile(String name) {

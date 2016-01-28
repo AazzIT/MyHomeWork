@@ -1,4 +1,4 @@
-package lesson10.fileWork;
+package lesson10.filework;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
