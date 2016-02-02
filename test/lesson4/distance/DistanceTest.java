@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class DistanceTest {
 
-    @Test
+    @Test(timeout = 1000)
     public void testDistance() throws Exception {
         final double x1 = 3;
         final double y1 = 4;
