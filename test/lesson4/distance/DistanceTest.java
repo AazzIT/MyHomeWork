@@ -3,8 +3,6 @@ package lesson4.distance;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class DistanceTest {
 
     @Test(timeout = 1000)
