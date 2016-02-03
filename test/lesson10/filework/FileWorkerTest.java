@@ -1,24 +1,24 @@
 package lesson10.filework;
 
-import org.junit.Before;
+import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class FileWorkerTest {
+    public static final int CRYPT_POWER = 114;
+    public static boolean ENCRYPT = true;
+    public static boolean DECRYPT = false;
+    public static final String FILE_NAME = "CryptedText.txt";
 
-    @Before
-    public void setUp() throws Exception {
-
-    }
-
-    @Test
-    public void testWriteToFile() throws Exception {
-
-    }
+    private String text = "... Ad cogitandum et agendum homo natus est ...";
+    private String cryptedText = "... Kn myqsdkxnew od kqoxnew rywy xkdec ocd ...";
 
     @Test
-    public void testReadFromFile() throws Exception {
+    public void testWriteReadFile() throws Exception {
+        text = Cryptographer.crypt(text, CRYPT_POWER, ENCRYPT);
+        FileWorker.writeToFile(FILE_NAME, text);
 
+        text = FileWorker.readFromFile(FILE_NAME);
+
+        Assert.assertEquals("OK: ", cryptedText, text);
     }
 }
