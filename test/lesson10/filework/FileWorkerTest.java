@@ -6,7 +6,6 @@ import org.junit.Test;
 public class FileWorkerTest {
     public static final int CRYPT_POWER = 114;
     public static boolean ENCRYPT = true;
-    public static boolean DECRYPT = false;
     public static final String FILE_NAME = "CryptedText.txt";
 
     private String text = "... Ad cogitandum et agendum homo natus est ...";
