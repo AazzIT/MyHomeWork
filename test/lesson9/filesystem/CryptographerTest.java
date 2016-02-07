@@ -7,9 +7,10 @@ import org.junit.Test;
 public class CryptographerTest {
     public static final int CRYPT_POWER = 114;
 
-    private String encryptString;
+    private String encryptString;//нет смысла объявлять поля класса, если ты эти переменные используешь в одном методе и все.
+    //Идея сама подсказывает, что можно их сделать локальными.
     private String decryptString;
-    private Folder rootFolder;
+    private Folder rootFolder; //какой смысл в сетапе заводить рут фолдер, пикчер фолдер, если ты их не тестишь?
     private Folder pictureFolder;
     private Folder audioFolder;
     private String text;

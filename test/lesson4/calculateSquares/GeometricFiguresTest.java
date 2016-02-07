@@ -17,8 +17,9 @@ public class GeometricFiguresTest {
         figures.setTriangleSide1(3);
         figures.setTriangleSide2(4);
         figures.setTriangleSide3(5);
-        final double result = figures.triangleSquare();
-        Assert.assertEquals(6, result, 0);
+        final double result = figures.triangleSquare();//не соглашусь, зачем здесь делать переменную резалт файнал?
+        //а если мы захотим поменять одну из сторон и пересчитать площадь?
+        Assert.assertEquals(6, result, 0); //о чем нам говорит третий параметр - дельта?
 
     }
 
