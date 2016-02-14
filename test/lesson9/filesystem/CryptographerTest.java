@@ -20,14 +20,9 @@ public class CryptographerTest {
 
     @Test
     public void testEncryptDecrypt() throws Exception {
-        String encryptString; //ок, а зачем отделять объявление переменной и тут же сразу присваивать значение?
-        //Это можно сделать в одну строку))
-        String decryptString;
-        String text;
-        text = audioFolder.showListOfFiles();
-        encryptString=Cryptographer.encrypt(text,CRYPT_POWER); //потерялись пробелы между переменной, знаком присвоения и тем
-        //что ты присваиваешь.
-        decryptString=Cryptographer.decrypt(encryptString,CRYPT_POWER);
+        String text = audioFolder.showListOfFiles();
+        String encryptString = Cryptographer.encrypt(text,CRYPT_POWER);
+        String decryptString = Cryptographer.decrypt(encryptString,CRYPT_POWER);
         Assert.assertEquals(text, decryptString);
     }
 }
